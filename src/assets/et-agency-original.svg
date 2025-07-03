@@ -1,0 +1,42 @@
+<svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- ET Agency Original Logo - Based on Google Photos image -->
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563EB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EA580C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main container -->
+  <g transform="translate(20, 20)">
+    <!-- ET letters in bold, modern style -->
+    <g>
+      <!-- E letter -->
+      <rect x="0" y="0" width="30" height="8" rx="2" fill="url(#blueGradient)"/>
+      <rect x="0" y="18" width="25" height="8" rx="2" fill="url(#blueGradient)"/>
+      <rect x="0" y="36" width="30" height="8" rx="2" fill="url(#blueGradient)"/>
+      <rect x="0" y="54" width="30" height="8" rx="2" fill="url(#blueGradient)"/>
+      <rect x="0" y="0" width="8" height="62" rx="2" fill="url(#blueGradient)"/>
+      
+      <!-- T letter -->
+      <rect x="40" y="0" width="30" height="8" rx="2" fill="url(#orangeGradient)"/>
+      <rect x="51" y="0" width="8" height="62" rx="2" fill="url(#orangeGradient)"/>
+    </g>
+    
+    <!-- AGENCY text -->
+    <text x="80" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#374151">AGENCY</text>
+    
+    <!-- Decorative elements and accents -->
+    <circle cx="155" cy="15" r="4" fill="#2563EB" opacity="0.7"/>
+    <circle cx="150" cy="30" r="3" fill="#F97316" opacity="0.6"/>
+    <circle cx="160" cy="45" r="3.5" fill="#2563EB" opacity="0.5"/>
+    
+    <!-- Modern underline accent -->
+    <rect x="0" y="70" width="70" height="4" rx="2" fill="url(#blueGradient)" opacity="0.8"/>
+    <rect x="75" y="70" width="50" height="4" rx="2" fill="url(#orangeGradient)" opacity="0.6"/>
+  </g>
+</svg>

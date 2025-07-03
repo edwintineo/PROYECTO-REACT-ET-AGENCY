@@ -1,0 +1,23 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="#3B82F6" stroke="#1E40AF" stroke-width="2"/>
+  
+  <!-- Laptop icon -->
+  <g transform="translate(8, 10)">
+    <!-- Laptop base -->
+    <path d="M1 10 L15 10 L15.5 12 L0.5 12 Z" fill="white" opacity="0.9"/>
+    <!-- Laptop screen -->
+    <rect x="2" y="4" width="12" height="6" rx="0.5" fill="white" opacity="0.9"/>
+    <rect x="2.5" y="4.5" width="11" height="5" rx="0.3" fill="#1F2937"/>
+    <!-- Screen content -->
+    <rect x="3" y="5" width="3" height="0.5" rx="0.2" fill="#3B82F6"/>
+    <rect x="3" y="6" width="9" height="0.3" rx="0.1" fill="#10B981"/>
+    <rect x="3" y="7" width="7" height="0.3" rx="0.1" fill="#F59E0B"/>
+    <circle cx="12" cy="6" r="0.8" fill="#EF4444"/>
+  </g>
+  
+  <!-- ET letters -->
+  <text x="16" y="24" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white" text-anchor="middle">
+    <tspan>ET</tspan>
+  </text>
+</svg>

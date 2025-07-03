@@ -1,0 +1,154 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Boutique Luna - E-commerce de Moda",
+      "category": "E-commerce",
+      "description": "Tienda online completa para boutique de moda femenina con integración de pagos chilenos y gestión de inventario.",
+      "image": "/images/portfolio/boutique-luna.svg",
+      "technologies": ["React", "Node.js", "Webpay Plus", "MongoDB"],
+      "features": [
+        "Catálogo de productos dinámico",
+        "Carrito de compras avanzado",
+        "Integración Webpay Plus",
+        "Panel de administración",
+        "Sistema de inventario",
+        "Envíos automatizados"
+      ],
+      "url": "https://boutiqueluna.cl",
+      "client": "Boutique Luna",
+      "year": 2024,
+      "duration": "3 meses",
+      "results": {
+        "salesIncrease": "300%",
+        "conversionRate": "4.2%",
+        "pageSpeed": "95/100"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Ferretería El Martillo - Sitio Corporativo",
+      "category": "Sitio Web",
+      "description": "Sitio web corporativo para ferretería familiar con catálogo de productos y sistema de cotizaciones.",
+      "image": "/images/portfolio/ferreteria-martillo.svg",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL"],
+      "features": [
+        "Catálogo de productos",
+        "Sistema de cotizaciones",
+        "Mapa de sucursales",
+        "Blog corporativo",
+        "Formularios de contacto",
+        "Optimización SEO"
+      ],
+      "url": "https://ferreteriaelmartillo.cl",
+      "client": "Ferretería El Martillo",
+      "year": 2024,
+      "duration": "2 meses",
+      "results": {
+        "trafficIncrease": "250%",
+        "leadGeneration": "180%",
+        "pageSpeed": "92/100"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Pastelería Dulce Hogar - E-commerce",
+      "category": "E-commerce",
+      "description": "Tienda online para pastelería artesanal con sistema de pedidos personalizados y calendario de entregas.",
+      "image": "/images/portfolio/pasteleria-dulce.svg",
+      "technologies": ["React", "Express.js", "Flow", "PostgreSQL"],
+      "features": [
+        "Pedidos personalizados",
+        "Calendario de entregas",
+        "Galería de productos",
+        "Sistema de reseñas",
+        "Integración Flow",
+        "Notificaciones automáticas"
+      ],
+      "url": "https://pasteleriadulcehogar.cl",
+      "client": "Pastelería Dulce Hogar",
+      "year": 2024,
+      "duration": "2.5 meses",
+      "results": {
+        "orderIncrease": "400%",
+        "customerSatisfaction": "98%",
+        "pageSpeed": "94/100"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Clínica Dental Sonrisa - Sitio Web",
+      "category": "Sitio Web",
+      "description": "Sitio web profesional para clínica dental con sistema de citas online y información de servicios.",
+      "image": "/images/portfolio/clinica-sonrisa.jpg",
+      "technologies": ["Vue.js", "Laravel", "MySQL", "Stripe"],
+      "features": [
+        "Sistema de citas online",
+        "Información de servicios",
+        "Galería de casos",
+        "Blog médico",
+        "Formularios de contacto",
+        "Integración con calendario"
+      ],
+      "url": "https://clinicasonrisa.cl",
+      "client": "Clínica Dental Sonrisa",
+      "year": 2023,
+      "duration": "3 meses",
+      "results": {
+        "appointmentIncrease": "200%",
+        "patientSatisfaction": "96%",
+        "pageSpeed": "91/100"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Restaurante Sabores - App de Delivery",
+      "category": "Aplicación",
+      "description": "Aplicación móvil para restaurante con sistema de delivery y pagos integrados.",
+      "image": "/images/portfolio/restaurante-sabores.jpg",
+      "technologies": ["React Native", "Node.js", "MongoDB", "Mercado Pago"],
+      "features": [
+        "Menú digital interactivo",
+        "Sistema de delivery",
+        "Tracking de pedidos",
+        "Programa de fidelidad",
+        "Integración Mercado Pago",
+        "Notificaciones push"
+      ],
+      "url": "https://restaurantesabores.cl",
+      "client": "Restaurante Sabores",
+      "year": 2023,
+      "duration": "4 meses",
+      "results": {
+        "deliveryOrders": "500%",
+        "customerRetention": "85%",
+        "appRating": "4.8/5"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Inmobiliaria Hogar - Portal Web",
+      "category": "Portal Web",
+      "description": "Portal inmobiliario con búsqueda avanzada, tours virtuales y sistema de contacto con agentes.",
+      "image": "/images/portfolio/inmobiliaria-hogar.jpg",
+      "technologies": ["Next.js", "Prisma", "PostgreSQL", "Cloudinary"],
+      "features": [
+        "Búsqueda avanzada de propiedades",
+        "Tours virtuales 360°",
+        "Sistema de favoritos",
+        "Chat con agentes",
+        "Calculadora de crédito",
+        "Mapa interactivo"
+      ],
+      "url": "https://inmobiliariahogar.cl",
+      "client": "Inmobiliaria Hogar",
+      "year": 2023,
+      "duration": "5 meses",
+      "results": {
+        "propertyViews": "350%",
+        "leadQuality": "90%",
+        "pageSpeed": "93/100"
+      }
+    }
+  ]
+}
