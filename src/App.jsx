@@ -7,11 +7,12 @@ import Home from './pages/Home'
 import Services from './pages/Services'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
-import Blog from './pages/Blog'
-import BlogPost from './pages/BlogPost'
+
+
 import About from './pages/About'
 import SEOServices from './pages/SEOServices'
 import FAQ from './pages/FAQ'
+import Terminos from './pages/Terminos'
 import ChatBot from './components/ChatBot'
 
 function App() {
@@ -25,12 +26,11 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/servicios" element={<Services />} />
               <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/contacto" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/quienes-somos" element={<About />} />
-              <Route path="/posicionamiento-web-seo" element={<SEOServices />} />
-              <Route path="/faq" element={<FAQ />} />
+                            <Route path="/contacto" element={<Contact />} />
+                            <Route path="/quienes-somos" element={<About />} />
+                            <Route path="/seo-servicios" element={<SEOServices />} />
+                            <Route path="/faq" element={<FAQ />} />
+                            <Route path="/terminos" element={<Terminos />} />
             </Routes>
           </main>
           <Footer />

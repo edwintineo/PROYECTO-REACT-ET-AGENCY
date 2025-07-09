@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = ({ hero }) => {
@@ -58,11 +58,6 @@ const HeroSection = ({ hero }) => {
               {hero.ctaText}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            
-            <button className="flex items-center gap-2 px-8 py-4 text-lg border-2 border-white/30 rounded-full hover:border-white/50 transition-all duration-300 group">
-              <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              Ver demo
-            </button>
           </motion.div>
 
           {/* Stats */}

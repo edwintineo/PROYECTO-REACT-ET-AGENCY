@@ -190,7 +190,7 @@ colors: {
 ## Soporte
 
 Para soporte técnico o consultas sobre el proyecto:
-- Email: contacto@etagency.cl
+- Email: info@etagency.cl
 - Teléfono: +56 9 1234 5678
 
 ## Licencia

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet'; // Importar Helmet
 import { motion } from 'framer-motion';
 import { Search, TrendingUp, Target, BarChart3, Globe, Users, CheckCircle, ArrowRight, Star, Award, Zap, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -144,38 +145,43 @@ const SEOServices = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Posicionamiento Web <span className="text-green-400">SEO</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
-              Lleva tu sitio web a la primera página de Google y aumenta tu visibilidad online de forma orgánica y sostenible.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contacto"
-                className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold transition-colors inline-flex items-center justify-center"
-              >
-                Solicitar Auditoría Gratuita
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-colors">
-                Ver Casos de Éxito
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    <>
+      <Helmet>
+        <title>Servicios SEO | Posicionamiento Web en Google - ET Agency</title>
+        <meta name="description" content="Servicios profesionales de posicionamiento web SEO en Chile. Aumenta tu tráfico orgánico y visibilidad en Google con nuestras estrategias." />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Posicionamiento Web <span className="text-green-400">SEO</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
+                Lleva tu sitio web a la primera página de Google y aumenta tu visibilidad online de forma orgánica y sostenible.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contacto"
+                  className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold transition-colors inline-flex items-center justify-center"
+                >
+                  Solicitar Auditoría Gratuita
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-colors">
+                  Ver Casos de Éxito
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
       {/* Benefits Section */}
       <section className="py-20">
@@ -392,6 +398,7 @@ const SEOServices = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

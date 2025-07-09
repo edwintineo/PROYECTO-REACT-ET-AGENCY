@@ -1060,8 +1060,7 @@ export { default as PlaceholderInfo } from './PlaceholderInfo';
 // Mock Info Component
 export { default as MockInfo } from './MockInfo';
 
-// Demo Info Component
-export { default as DemoInfo } from './DemoInfo';
+
 
 // Example Info Component
 export { default as ExampleInfo } from './ExampleInfo';

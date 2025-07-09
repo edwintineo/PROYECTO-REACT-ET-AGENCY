@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet' // Importar Helmet
 import { motion } from 'framer-motion'
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
   Send,
   CheckCircle,
   MessageSquare,
@@ -13,7 +14,11 @@ import {
   Globe,
   Calendar,
   DollarSign,
-  MessageCircle
+  MessageCircle,
+  Settings,
+  Star,
+  Shield,
+  Zap
 } from 'lucide-react'
 
 const Contact = () => {
@@ -68,25 +73,29 @@ const Contact = () => {
       icon: Phone,
       title: 'Teléfono',
       info: '+56 9 4068 1210',
-      description: 'Lunes a Viernes 9:00 - 18:00'
+      description: 'Llamadas y WhatsApp disponibles',
+      color: 'bg-blue-100 text-blue-600'
     },
     {
       icon: Mail,
       title: 'Email',
-      info: 'contacto@etagency.cl',
-      description: 'Respuesta en menos de 24 horas'
+      info: 'info@etagency.cl',
+      description: 'Respuesta garantizada en 24 horas',
+      color: 'bg-green-100 text-green-600'
     },
     {
       icon: MapPin,
       title: 'Ubicación',
       info: 'Santiago, Chile',
-      description: 'Atención presencial con cita previa'
+      description: 'Reuniones presenciales y virtuales',
+      color: 'bg-purple-100 text-purple-600'
     },
     {
       icon: Clock,
       title: 'Horarios',
       info: 'Lun - Vie: 9:00 - 18:00',
-      description: 'Sábados: 10:00 - 14:00'
+      description: 'Sábados: 10:00 - 14:00',
+      color: 'bg-orange-100 text-orange-600'
     }
   ]
 
@@ -120,52 +129,65 @@ const Contact = () => {
   const faqs = [
     {
       question: '¿Cuánto tiempo toma desarrollar un sitio web?',
-      answer: 'El tiempo varía según la complejidad. Una landing page toma 1-2 semanas, mientras que un sitio web completo puede tomar 3-6 semanas.'
+      answer: 'El tiempo varía según la complejidad. Una landing page toma 1-2 semanas, mientras que un sitio web completo puede tomar 3-6 semanas. Para e-commerce o aplicaciones complejas, el tiempo puede extenderse a 8-12 semanas.'
     },
     {
       question: '¿Incluyen el hosting y dominio?',
-      answer: 'Sí, todos nuestros planes incluyen hosting por el primer año y dominio .CL gratuito.'
+      answer: 'Sí, todos nuestros planes incluyen hosting optimizado por el primer año y dominio .CL gratuito. También ofrecemos opciones de hosting premium para sitios de alto tráfico.'
     },
     {
       question: '¿Ofrecen mantenimiento después del lanzamiento?',
-      answer: 'Sí, ofrecemos planes de mantenimiento mensual que incluyen actualizaciones, backups y soporte técnico.'
+      answer: 'Sí, ofrecemos planes de mantenimiento mensual que incluyen actualizaciones de seguridad, backups automáticos, monitoreo 24/7 y soporte técnico prioritario.'
     },
     {
       question: '¿Pueden integrar pasarelas de pago chilenas?',
-      answer: 'Por supuesto, trabajamos con Webpay Plus, Flow, Mercado Pago y otras pasarelas locales.'
+      answer: 'Por supuesto, trabajamos con Webpay Plus, Flow, Mercado Pago, Khipu y otras pasarelas locales. También integramos sistemas internacionales como PayPal y Stripe.'
+    },
+    {
+      question: '¿Qué incluye el servicio de SEO?',
+      answer: 'Nuestro servicio SEO incluye optimización técnica, investigación de palabras clave, creación de contenido, link building, y reportes mensuales de posicionamiento.'
+    },
+    {
+      question: '¿Trabajan con empresas de todos los tamaños?',
+      answer: 'Sí, trabajamos desde emprendedores y startups hasta grandes empresas. Adaptamos nuestras soluciones según las necesidades y presupuesto de cada cliente.'
     }
   ]
 
   return (
-    <div className="pt-20">
-      {/* Hero Section */}
-      <section className="gradient-bg section-padding">
-        <div className="container-custom text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              Hablemos de tu <span className="text-yellow-400">Proyecto</span>
-            </h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
-              Estamos aquí para ayudarte a hacer realidad tu visión digital. 
-              Contáctanos y recibe una cotización personalizada.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#formulario" className="btn-primary bg-white text-primary-600 hover:bg-gray-100">
-                Solicitar Cotización
-                <Send className="ml-2" size={20} />
-              </a>
-              <a href="https://wa.me/56940681210" className="bg-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-700 transition-all duration-300 inline-flex items-center justify-center">
-                Enviar Whatsapp
-                <MessageCircle className="ml-2" size={20} />
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    <>
+      <Helmet>
+        <title>Contacto | Solicita tu Cotización Gratuita - ET Agency</title>
+        <meta name="description" content="Contáctanos para solicitar una cotización gratuita para tu proyecto de diseño web, e-commerce o marketing digital en Chile. ¡Estamos listos para ayudarte!" />
+      </Helmet>
+      <div className="pt-20">
+        {/* Hero Section */}
+        <section className="gradient-bg section-padding">
+          <div className="container-custom text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+                Hablemos de tu <span className="text-yellow-400">Proyecto</span>
+              </h1>
+              <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
+                Estamos aquí para ayudarte a hacer realidad tu visión digital.
+                Contáctanos y recibe una cotización personalizada.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#formulario" className="btn-primary bg-white text-primary-600 hover:bg-gray-100">
+                  Solicitar Cotización
+                  <Send className="ml-2" size={20} />
+                </a>
+                <a href="https://wa.me/56940681210" target="_blank" rel="noopener noreferrer" className="bg-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-700 transition-all duration-300 inline-flex items-center justify-center">
+                  Enviar WhatsApp
+                  <MessageCircle className="ml-2" size={20} />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
       {/* Contact Info */}
       <section className="section-padding section-bg">
@@ -193,19 +215,82 @@ const Contact = () => {
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center p-6 bg-gray-50 rounded-xl card-hover"
+                  className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
                 >
-                  <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon className="text-primary-600" size={24} />
+                  <div className={`w-16 h-16 ${info.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                    <Icon size={24} />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {info.title}
                   </h3>
-                  <p className="text-primary-600 font-semibold mb-1">
+                  <p className="text-gray-800 font-semibold mb-2">
                     {info.info}
                   </p>
                   <p className="text-gray-600 text-sm">
                     {info.description}
+                  </p>
+                </motion.div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              ¿Por qué elegir <span className="text-primary-600">ET Agency</span>?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Somos tu socio estratégico en transformación digital
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Zap,
+                title: 'Respuesta Rápida',
+                description: 'Cotizaciones en menos de 24 horas y desarrollo ágil de proyectos.',
+                color: 'bg-yellow-100 text-yellow-600'
+              },
+              {
+                icon: Shield,
+                title: 'Garantía Total',
+                description: 'Garantizamos la calidad de nuestro trabajo con soporte post-lanzamiento.',
+                color: 'bg-green-100 text-green-600'
+              },
+              {
+                icon: Star,
+                title: 'Experiencia Comprobada',
+                description: 'Más de 100 proyectos exitosos y clientes satisfechos en Chile.',
+                color: 'bg-purple-100 text-purple-600'
+              }
+            ].map((feature, index) => {
+              const Icon = feature.icon
+              return (
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  className="text-center p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300"
+                >
+                  <div className={`w-16 h-16 ${feature.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                    <Icon size={24} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {feature.description}
                   </p>
                 </motion.div>
               )
@@ -452,20 +537,20 @@ const Contact = () => {
                     +56 9 4068 1210
                   </a>
                   <a 
-                    href="mailto:contacto@etagency.cl" 
+                    href="mailto:info@etagency.cl" 
                     className="flex items-center text-primary-600 hover:text-primary-700 transition-colors"
                   >
                     <Mail size={16} className="mr-2" />
-                    contacto@etagency.cl
+                    info@etagency.cl
                   </a>
                   <a 
-                    href="https://wa.me/56912345678" 
+                    href="https://wa.me/56940681210" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center text-primary-600 hover:text-primary-700 transition-colors"
                   >
-                    <MessageSquare size={16} className="mr-2" />
-                    WhatsApp
+                    <MessageCircle size={16} className="mr-2" />
+                    WhatsApp: +56 9 4068 1210
                   </a>
                 </div>
               </div>
@@ -474,42 +559,87 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="section-padding section-bg">
+      {/* Location & Final CTA */}
+      <section className="section-padding bg-gradient-to-br from-primary-600 to-primary-800">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Nuestra Ubicación
-            </h2>
-            <p className="text-muted">
-              Nos encontramos en Santiago, Chile. Atención presencial con cita previa.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gray-200 dark:bg-gray-700 rounded-xl h-96 flex items-center justify-center"
-          >
-            <div className="text-center">
-              <MapPin className="text-primary-600 mx-auto mb-4" size={48} />
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                Santiago, Chile
-              </h3>
-              <p className="text-muted">
-                Mapa interactivo próximamente
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Location Info */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-white"
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+                Estamos en <span className="text-yellow-400">Santiago</span>
+              </h2>
+              <p className="text-xl text-gray-200 mb-8">
+                Trabajamos con clientes de todo Chile y Latinoamérica. 
+                Ofrecemos reuniones presenciales en Santiago y virtuales para el resto del país.
               </p>
-            </div>
-          </motion.div>
+              
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <MapPin className="text-yellow-400 mr-3" size={20} />
+                  <span className="text-gray-200">Santiago, Región Metropolitana, Chile</span>
+                </div>
+                <div className="flex items-center">
+                  <Clock className="text-yellow-400 mr-3" size={20} />
+                  <span className="text-gray-200">Lun - Vie: 9:00 - 18:00 | Sáb: 10:00 - 14:00</span>
+                </div>
+                <div className="flex items-center">
+                  <Globe className="text-yellow-400 mr-3" size={20} />
+                  <span className="text-gray-200">Atención a todo Chile y Latinoamérica</span>
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="#formulario" 
+                  className="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors inline-flex items-center justify-center"
+                >
+                  Solicitar Reunión
+                  <Calendar className="ml-2" size={18} />
+                </a>
+                <a 
+                  href="https://wa.me/56940681210" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-all inline-flex items-center justify-center"
+                >
+                  WhatsApp Directo
+                  <MessageCircle className="ml-2" size={18} />
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Map Placeholder */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center"
+            >
+              <MapPin className="text-yellow-400 mx-auto mb-4" size={48} />
+              <h3 className="text-xl font-semibold text-white mb-4">
+                Ubicación Central en Santiago
+              </h3>
+              <p className="text-gray-200 mb-6">
+                Nos ubicamos en una zona céntrica y de fácil acceso. 
+                Coordina tu visita con anticipación.
+              </p>
+              <div className="bg-white/20 rounded-lg p-4">
+                <p className="text-white font-semibold mb-2">Próximamente:</p>
+                <p className="text-gray-200 text-sm">
+                  Mapa interactivo y direcciones exactas
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>
+    </>
   )
 }
 

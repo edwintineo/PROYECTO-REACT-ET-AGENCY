@@ -68,7 +68,7 @@ const ServiceCard = ({ service, index }) => {
 
       {/* CTA Button */}
       <Link
-        to="/contact"
+        to="/contacto"
         className="inline-flex items-center gap-2 w-full justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg"
       >
         Solicitar cotización

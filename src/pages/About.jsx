@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet'; // Importar Helmet
 import { motion } from 'framer-motion';
 import { Users, Target, Award, Heart, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -63,26 +64,31 @@ const About = () => {
   ];
 
   return (
-    <div className="page-container">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Quiénes <span className="text-blue-400">Somos</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Somos ET Agency, una agencia digital especializada en transformar ideas en experiencias digitales exitosas.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <>
+      <Helmet>
+        <title>Quiénes Somos | Agencia de Diseño Web y Marketing Digital - ET Agency</title>
+        <meta name="description" content="Conoce a ET Agency, una agencia digital especializada en diseño web, e-commerce y marketing digital. Nuestra misión, visión y valores." />
+      </Helmet>
+      <div className="page-container">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Quiénes <span className="text-blue-400">Somos</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+                Somos ET Agency, una agencia digital especializada en transformar ideas en experiencias digitales exitosas.
+              </p>
+            </motion.div>
+          </div>
+        </section>
 
       {/* Mission Section */}
       <section className="section-padding section-bg">
@@ -255,6 +261,7 @@ const About = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

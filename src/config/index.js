@@ -99,7 +99,7 @@ const config = {
 
   // Contact Information
   contact: {
-    email: 'contacto@etagency.cl',
+    email: 'info@etagency.cl',
     phone: '+56 9 4068 1210',
     address: 'Santiago, Chile',
     businessHours: {

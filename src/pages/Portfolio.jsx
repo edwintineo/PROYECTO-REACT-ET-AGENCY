@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet' // Importar Helmet
 import { motion } from 'framer-motion'
-import { 
-  ExternalLink, 
-  Eye, 
+import {
+  ExternalLink,
+  Eye,
   Filter,
   Globe,
   ShoppingCart,
@@ -189,39 +190,44 @@ const Portfolio = () => {
     : projects.filter(project => project.category === activeFilter)
 
   return (
-    <div className="page-container">
-      {/* Hero Section */}
-      <section className="gradient-bg section-padding">
-        <div className="container-custom text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              Nuestro <span className="text-yellow-400">Portfolio</span>
-            </h1>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
-              Descubre los proyectos que hemos desarrollado para nuestros clientes. 
-              Cada uno diseñado para generar resultados excepcionales.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
-                <div className="text-2xl font-bold">960</div>
-                <div className="text-sm">Proyectos Completados</div>
+    <>
+      <Helmet>
+        <title>Portfolio | Proyectos de Diseño Web y E-commerce - ET Agency</title>
+        <meta name="description" content="Explora nuestro portafolio de proyectos exitosos de diseño web, tiendas online y soluciones digitales para empresas en Chile." />
+      </Helmet>
+      <div className="page-container">
+        {/* Hero Section */}
+        <section className="gradient-bg section-padding">
+          <div className="container-custom text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+                Nuestro <span className="text-yellow-400">Portfolio</span>
+              </h1>
+              <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
+                Descubre los proyectos que hemos desarrollado para nuestros clientes.
+                Cada uno diseñado para generar resultados excepcionales.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
+                  <div className="text-2xl font-bold">960</div>
+                  <div className="text-sm">Proyectos Completados</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
+                  <div className="text-2xl font-bold">95%</div>
+                  <div className="text-sm">Clientes Satisfechos</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
+                  <div className="text-2xl font-bold">15</div>
+                  <div className="text-sm">Años de Experiencia</div>
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
-                <div className="text-2xl font-bold">95%</div>
-                <div className="text-sm">Clientes Satisfechos</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
-                <div className="text-2xl font-bold">15</div>
-                <div className="text-sm">Años de Experiencia</div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+            </motion.div>
+          </div>
+        </section>
 
       {/* Filter Section */}
       <section className="section-padding bg-white dark:bg-gray-900">
@@ -418,6 +424,7 @@ const Portfolio = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

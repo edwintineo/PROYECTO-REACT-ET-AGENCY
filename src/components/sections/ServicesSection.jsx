@@ -78,14 +78,14 @@ const ServicesSection = ({ services }) => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                to="/contacto"
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 group"
               >
                 Solicitar cotización personalizada
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/services"
+                to="/servicios"
                 className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:border-white/50 hover:bg-white/10 transition-all duration-300"
               >
                 Ver todos los servicios

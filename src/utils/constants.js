@@ -15,7 +15,7 @@ export const COMPANY_INFO = {
 
 // Contact Information
 export const CONTACT_INFO = {
-  email: 'contacto@etagency.cl',
+  email: 'info@etagency.cl',
   phone: '+56 9 4068 1210',
   whatsapp: '+56940681210',
   address: {
@@ -52,26 +52,26 @@ export const NAVIGATION = {
       path: '/servicios',
       dropdown: [
         { name: 'Todos los Servicios', path: '/servicios' },
-        { name: 'Posicionamiento SEO', path: '/posicionamiento-web-seo' },
+        { name: 'Posicionamiento SEO', path: '/seo' },
         { name: 'Desarrollo Web', path: '/servicios/desarrollo-web' },
-        { name: 'Marketing Digital', path: '/servicios/marketing-digital' }
+    { name: 'Marketing Digital', path: '/servicios/marketing-digital' }
       ]
     },
     { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Quiénes Somos', path: '/quienes-somos' },
+    { name: 'Quiénes Somos', path: '/about' },
     { name: 'Blog', path: '/blog' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Contacto', path: '/contacto' }
   ],
   footer: {
     services: [
-      { name: 'Posicionamiento SEO', path: '/posicionamiento-web-seo' },
+      { name: 'Posicionamiento SEO', path: '/seo' },
       { name: 'Desarrollo Web', path: '/servicios/desarrollo-web' },
-      { name: 'Marketing Digital', path: '/servicios/marketing-digital' },
-      { name: 'Consultoría Digital', path: '/servicios/consultoria' }
+  { name: 'Marketing Digital', path: '/servicios/marketing-digital' },
+  { name: 'Consultoría Digital', path: '/servicios/consultoria' }
     ],
     company: [
-      { name: 'Quiénes Somos', path: '/quienes-somos' },
+      { name: 'Quiénes Somos', path: '/about' },
       { name: 'Nuestro Equipo', path: '/equipo' },
       { name: 'Casos de Éxito', path: '/casos-exito' },
       { name: 'Testimonios', path: '/testimonios' }
@@ -351,7 +351,7 @@ export const API_ENDPOINTS = {
   newsletter: '/newsletter',
   blog: '/blog',
   portfolio: '/portfolio',
-  services: '/services',
+  services: '/servicios',
   testimonials: '/testimonials',
   faq: '/faq'
 };

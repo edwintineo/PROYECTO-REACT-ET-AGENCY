@@ -9,14 +9,13 @@ const Footer = () => {
     { name: 'Diseño Web', href: '/servicios#diseno-web' },
     { name: 'Tiendas Online', href: '/servicios#tiendas-online' },
     { name: 'Mantenciones', href: '/servicios#mantenciones' },
-    { name: 'SEO', href: '/servicios#seo' },
+    { name: 'SEO', href: '/seo-servicios' },
     { name: 'Integraciones', href: '/servicios#integraciones' }
   ]
 
   const company = [
-    { name: 'Sobre Nosotros', href: '/nosotros' },
+    { name: 'Sobre Nosotros', href: '/quienes-somos' },
     { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contacto', href: '/contacto' },
     { name: 'Términos y Condiciones', href: '/terminos' }
   ]
@@ -37,7 +36,7 @@ const Footer = () => {
           <div className="mb-8">
             <Link to="/" className="flex items-center mb-4">
               <img 
-                src="/src/assets/laptop-logo.svg" 
+                src="/src/assets/laptop-logo.svg"
                 alt="ET Agency - Agencia de Marketing Digital" 
                 className="h-16 w-auto"
               />

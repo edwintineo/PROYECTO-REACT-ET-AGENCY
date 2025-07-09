@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet'; // Importar Helmet
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Search, MessageCircle, Phone, Mail, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -116,38 +117,43 @@ const FAQ = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Preguntas <span className="text-blue-400">Frecuentes</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
-              Encuentra respuestas a las preguntas más comunes sobre nuestros servicios digitales.
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Buscar en preguntas frecuentes..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    <>
+      <Helmet>
+        <title>Preguntas Frecuentes (FAQ) | ET Agency</title>
+        <meta name="description" content="Encuentra respuestas a las preguntas más comunes sobre nuestros servicios de diseño web, e-commerce, SEO y marketing digital en ET Agency." />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Preguntas <span className="text-blue-400">Frecuentes</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
+                Encuentra respuestas a las preguntas más comunes sobre nuestros servicios digitales.
+              </p>
+              
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Buscar en preguntas frecuentes..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
       {/* FAQ Content */}
       <section className="py-20">
@@ -268,7 +274,7 @@ const FAQ = () => {
                 <p className="text-sm text-green-100">WhatsApp</p>
               </a>
               <a
-                href="https://wa.me/56912345678"
+                href="https://wa.me/56940681210"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-purple-600 hover:bg-purple-700 text-white p-6 rounded-xl transition-colors group"
@@ -282,6 +288,7 @@ const FAQ = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

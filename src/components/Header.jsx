@@ -26,14 +26,13 @@ const Header = () => {
       href: '/servicios',
       dropdown: [
         { name: 'Todos los Servicios', href: '/servicios' },
-        { name: 'Posicionamiento SEO', href: '/posicionamiento-web-seo' },
+        { name: 'Posicionamiento SEO', href: '/seo-servicios' },
         { name: 'Desarrollo Web', href: '/servicios#desarrollo-web' },
         { name: 'Marketing Digital', href: '/servicios#marketing-digital' }
       ]
     },
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'Quiénes Somos', href: '/quienes-somos' },
-    { name: 'Blog', href: '/blog' },
     { name: 'FAQ', href: '/faq' },
     { name: 'Contacto', href: '/contacto' }
   ]
@@ -72,7 +71,7 @@ const Header = () => {
                   >
                     <button
                       className={`font-medium transition-colors duration-200 flex items-center space-x-1 ${
-                        location.pathname === item.href || location.pathname.includes('posicionamiento-web-seo')
+                        location.pathname === item.href || location.pathname.includes('seo-servicios')
                           ? isScrolled
                             ? 'text-primary-600'
                             : isDarkMode ? 'text-white border-b-2 border-white' : 'text-primary-600 border-b-2 border-primary-600'
@@ -197,7 +196,7 @@ const Header = () => {
                           to={item.href}
                           onClick={() => setIsMenuOpen(false)}
                           className={`font-medium py-2 transition-colors duration-200 block ${
-                            location.pathname === item.href || location.pathname.includes('posicionamiento-web-seo')
+                            location.pathname === item.href || location.pathname.includes('seo-servicios')
                               ? 'text-primary-600 border-l-4 border-primary-600 pl-4'
                               : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 pl-4'
                           }`}
