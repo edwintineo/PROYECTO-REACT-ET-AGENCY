@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet' // Importar Helmet
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { 
@@ -22,6 +21,7 @@ import {
   Phone,
   MessageCircle
 } from 'lucide-react'
+import { Helmet } from 'react-helmet'
 
 const Services = () => {
   const mainServices = [
@@ -148,11 +148,13 @@ const Services = () => {
     }
   ]
 
+
+
   return (
     <>
       <Helmet>
-        <title>Nuestros Servicios | Diseño Web, E-commerce y SEO - ET Agency</title>
-        <meta name="description" content="Descubre nuestros servicios de diseño web profesional, desarrollo de tiendas online, mantenimiento y posicionamiento SEO para tu negocio en Chile." />
+        <title>Servicios - ET Agency | Diseño Web y Marketing Digital</title>
+        <meta name="description" content="Conoce nuestros servicios de diseño web, e-commerce, SEO y marketing digital. Soluciones profesionales para hacer crecer tu negocio online." />
       </Helmet>
       <div className="page-container">
         {/* Hero Section */}

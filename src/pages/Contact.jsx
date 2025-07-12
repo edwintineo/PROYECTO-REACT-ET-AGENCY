@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Helmet } from 'react-helmet' // Importar Helmet
 import { motion } from 'framer-motion'
 import {
   Mail,
@@ -20,6 +19,7 @@ import {
   Shield,
   Zap
 } from 'lucide-react'
+import { Helmet } from 'react-helmet'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -153,11 +153,13 @@ const Contact = () => {
     }
   ]
 
+
+
   return (
     <>
       <Helmet>
-        <title>Contacto | Solicita tu Cotización Gratuita - ET Agency</title>
-        <meta name="description" content="Contáctanos para solicitar una cotización gratuita para tu proyecto de diseño web, e-commerce o marketing digital en Chile. ¡Estamos listos para ayudarte!" />
+        <title>Contacto - ET Agency | Solicita tu Cotización</title>
+        <meta name="description" content="Contáctanos para solicitar una cotización gratuita de tu proyecto web. Estamos aquí para ayudarte a hacer crecer tu negocio online." />
       </Helmet>
       <div className="pt-20">
         {/* Hero Section */}
