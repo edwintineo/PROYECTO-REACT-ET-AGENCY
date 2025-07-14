@@ -66,4 +66,6 @@ app.listen(PORT, () => {
   console.log(`⚡ Modo: ${process.env.NODE_ENV || 'development'}`);
 });
 
-export default app;
+export default async (req, res) => {
+  app(req, res);
+};
