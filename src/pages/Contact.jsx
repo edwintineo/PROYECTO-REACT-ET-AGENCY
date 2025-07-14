@@ -47,13 +47,17 @@ const Contact = () => {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simular envío del formulario
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setIsSubmitted(true)
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false)
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
         setFormData({
           name: '',
           email: '',
@@ -63,9 +67,19 @@ const Contact = () => {
           budget: '',
           timeline: '',
           message: ''
-        })
-      }, 3000)
-    }, 2000)
+        });
+        setTimeout(() => setIsSubmitted(false), 3000); // Reset success message after 3 seconds
+      } else {
+        const errorData = await response.json();
+        console.error('Error al enviar el formulario:', errorData.error);
+        alert('Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.');
+      }
+    } catch (error) {
+      console.error('Error de red al enviar el formulario:', error);
+      alert('Hubo un problema de conexión. Por favor, verifica tu internet e inténtalo de nuevo.');
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   const contactInfo = [
@@ -493,6 +507,8 @@ const Contact = () => {
                       </>
                     )}
                   </button>
+
+
                 </form>
               )}
             </motion.div>
