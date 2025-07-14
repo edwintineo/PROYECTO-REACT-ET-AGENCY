@@ -14,7 +14,6 @@ import {
   ShoppingCart,
   BarChart3
 } from 'lucide-react'
-import { Image } from '../components/common'
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('todos')
@@ -262,12 +261,10 @@ const Blog = () => {
                     className="card-bg rounded-xl shadow-lg overflow-hidden card-hover group"
                   >
                     <div className="relative h-48 overflow-hidden">
-                      <Image 
+                      <img 
                         src={post.image} 
                         alt={post.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        lazy={true}
-                        webp={true}
                       />
                       <div className="absolute top-4 left-4">
                         <span className="bg-yellow-400 text-gray-900 px-2 py-1 rounded-full text-xs font-semibold">
@@ -368,12 +365,10 @@ const Blog = () => {
                       className="card-bg rounded-xl shadow-lg overflow-hidden card-hover group"
                     >
                       <div className="relative h-40 overflow-hidden">
-                        <Image 
+                        <img 
                           src={post.image} 
                           alt={post.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          lazy={true}
-                          webp={true}
                         />
                       </div>
                       

@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet'; // Importar Helmet
 import { motion } from 'framer-motion';
 import { Users, Target, Award, Heart, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { AvatarImage } from '../components/common';
 
 const About = () => {
   const stats = [
@@ -222,13 +221,8 @@ const About = () => {
                 viewport={{ once: true }}
                 className="card-bg rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
-                <div className="h-64 overflow-hidden">
-                  <AvatarImage
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                    fallback={<Users className="h-20 w-20 text-white" />}
-                  />
+                <div className="h-64 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                  <Users className="h-20 w-20 text-white" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{member.name}</h3>

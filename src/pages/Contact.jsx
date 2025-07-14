@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet' // Importar Helmet
 import { motion } from 'framer-motion'
 import {
   Mail,
@@ -19,7 +20,6 @@ import {
   Shield,
   Zap
 } from 'lucide-react'
-import { Helmet } from 'react-helmet'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -47,17 +47,13 @@ const Contact = () => {
     e.preventDefault()
     setIsSubmitting(true)
     
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setIsSubmitted(true);
+    // Simular envío del formulario
+    setTimeout(() => {
+      setIsSubmitting(false)
+      setIsSubmitted(true)
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false)
         setFormData({
           name: '',
           email: '',
@@ -67,19 +63,9 @@ const Contact = () => {
           budget: '',
           timeline: '',
           message: ''
-        });
-        setTimeout(() => setIsSubmitted(false), 3000); // Reset success message after 3 seconds
-      } else {
-        const errorData = await response.json();
-        console.error('Error al enviar el formulario:', errorData.error);
-        alert('Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.');
-      }
-    } catch (error) {
-      console.error('Error de red al enviar el formulario:', error);
-      alert('Hubo un problema de conexión. Por favor, verifica tu internet e inténtalo de nuevo.');
-    } finally {
-      setIsSubmitting(false);
-    }
+        })
+      }, 3000)
+    }, 2000)
   }
 
   const contactInfo = [
@@ -167,13 +153,11 @@ const Contact = () => {
     }
   ]
 
-
-
   return (
     <>
       <Helmet>
-        <title>Contacto - ET Agency | Solicita tu Cotización</title>
-        <meta name="description" content="Contáctanos para solicitar una cotización gratuita de tu proyecto web. Estamos aquí para ayudarte a hacer crecer tu negocio online." />
+        <title>Contacto | Solicita tu Cotización Gratuita - ET Agency</title>
+        <meta name="description" content="Contáctanos para solicitar una cotización gratuita para tu proyecto de diseño web, e-commerce o marketing digital en Chile. ¡Estamos listos para ayudarte!" />
       </Helmet>
       <div className="pt-20">
         {/* Hero Section */}
@@ -507,8 +491,6 @@ const Contact = () => {
                       </>
                     )}
                   </button>
-
-
                 </form>
               )}
             </motion.div>

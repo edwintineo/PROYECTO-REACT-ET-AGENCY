@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet'; // Importar Helmet
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -14,22 +15,16 @@ import {
 import HeroSection from '../components/sections/HeroSection';
 import ServicesSection from '../components/sections/ServicesSection';
 import PortfolioHighlight from '../components/sections/PortfolioHighlight';
-import { Helmet } from 'react-helmet';
-import { AvatarImage } from '../components/common';
-import OptimizedImage, { OptimizedAvatar } from '../components/OptimizedImage';
-import { useCDN } from '../components/CDNProvider';
 
 // Import data
 import homeData from '../data/home.json';
 
 const Home = () => {
-  const { isInitialized } = useCDN();
-
   return (
     <>
       <Helmet>
-        <title>ET Agency - Agencia de Marketing Digital y Desarrollo Web</title>
-        <meta name="description" content="Agencia especializada en diseño web, e-commerce y marketing digital para empresas en Chile. Aumenta tus ventas online con nuestros servicios profesionales." />
+        <title>ET Agency | Diseño Web y Marketing Digital en Chile</title>
+        <meta name="description" content="Agencia de marketing digital en Chile. Creamos sitios web profesionales, tiendas online y estrategias SEO para aumentar tus ventas." />
       </Helmet>
       <div className="min-h-screen">
         {/* Hero Section */}
@@ -117,13 +112,9 @@ const Home = () => {
 
                 {/* Client Info */}
                 <div className="flex items-center gap-4">
-                  <OptimizedAvatar
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    size={48}
-                    fallbackInitials={testimonial.name.charAt(0)}
-                    className="ring-2 ring-blue-100 dark:ring-blue-900"
-                  />
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
+                    {testimonial.name.charAt(0)}
+                  </div>
                   <div>
                     <p className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</p>
                     <p className="text-muted text-sm">{testimonial.company}</p>

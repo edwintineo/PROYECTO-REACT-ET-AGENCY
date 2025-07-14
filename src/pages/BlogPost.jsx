@@ -11,7 +11,6 @@ import {
   Tag,
   ExternalLink
 } from 'lucide-react'
-import { Image } from '../components/common'
 
 const BlogPost = () => {
   const { slug } = useParams()
@@ -31,13 +30,7 @@ const BlogPost = () => {
       tags: ['Diseño Web', 'Tendencias 2025', 'UX/UI', 'Chile'],
       metaDescription: 'Conoce las 10 tendencias de diseño web más importantes para 2025. Guía completa con ejemplos prácticos para empresas chilenas que buscan modernizar su presencia digital.',
       content: `
-        <Image 
-          src="/images/blog/tendencias-diseno-web-2025.svg" 
-          alt="Tendencias de Diseño Web 2025" 
-          style={{width: '100%', height: '300px', objectFit: 'cover', borderRadius: '8px', marginBottom: '2rem'}} 
-          lazy={true}
-          webp={true}
-        />
+        <img src="/images/blog/tendencias-diseno-web-2025.svg" alt="Tendencias de Diseño Web 2025" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 2rem;" />
         
         <h2>¿Por qué es Crucial Mantenerse al Día con las Tendencias de Diseño Web?</h2>
         <p>En el competitivo mercado digital chileno, tener un <strong>sitio web moderno y atractivo</strong> no es solo una ventaja, es una necesidad. Las tendencias de diseño web evolucionan constantemente, y mantenerse actualizado puede ser la diferencia entre captar la atención de tus clientes potenciales o perderlos ante la competencia.</p>
@@ -223,13 +216,7 @@ const BlogPost = () => {
       tags: ['SEO Local', 'Google My Business', 'Chile', 'Posicionamiento'],
       metaDescription: 'Aprende cómo posicionar tu negocio local en Google Chile. Guía completa de SEO local con estrategias probadas para aumentar tu visibilidad online.',
       content: `
-        <Image 
-          src="/images/blog/seo-local-chile.svg" 
-          alt="SEO Local en Chile" 
-          style={{width: '100%', height: '300px', objectFit: 'cover', borderRadius: '8px', marginBottom: '2rem'}} 
-          lazy={true}
-          webp={true}
-        />
+        <img src="/images/blog/seo-local-chile.svg" alt="SEO Local en Chile" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 2rem;" />
         
         <h2>¿Qué es el SEO Local y Por Qué es Crucial para tu Negocio en Chile?</h2>
         <p>El <strong>SEO local</strong> es una estrategia de optimización que ayuda a tu negocio a aparecer en los resultados de búsqueda cuando los usuarios buscan productos o servicios en tu área geográfica. En Chile, donde el 89% de las búsquedas incluyen términos de ubicación, dominar el SEO local puede ser la diferencia entre el éxito y el fracaso de tu negocio.</p>
@@ -494,13 +481,7 @@ const BlogPost = () => {
       tags: ['E-commerce', 'Webpay Plus', 'Conversiones', 'Tienda Online'],
       metaDescription: 'Aprende a integrar Webpay Plus en tu e-commerce chileno. Guía completa con mejores prácticas para aumentar conversiones y ventas online.',
       content: `
-        <Image 
-          src="/images/blog/ecommerce-webpay-plus.svg" 
-          alt="E-commerce con Webpay Plus" 
-          style={{width: '100%', height: '300px', objectFit: 'cover', borderRadius: '8px', marginBottom: '2rem'}} 
-          lazy={true}
-          webp={true}
-        />
+        <img src="/images/blog/ecommerce-webpay-plus.svg" alt="E-commerce con Webpay Plus" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 2rem;" />
         
         <h2>El E-commerce en Chile: Un Mercado en Constante Crecimiento</h2>
         <p>El <strong>comercio electrónico en Chile</strong> ha experimentado un crecimiento exponencial, especialmente después de 2020. Con más de 15 millones de usuarios digitales y un crecimiento anual del 25%, Chile se posiciona como uno de los mercados de e-commerce más dinámicos de Latinoamérica.</p>
@@ -814,13 +795,7 @@ const BlogPost = () => {
       tags: ['Marketing Digital', 'Pymes', 'Estrategia', 'Presupuesto'],
       metaDescription: 'Descubre estrategias de marketing digital efectivas para Pymes chilenas. Guía práctica con tácticas de bajo costo y alto impacto para hacer crecer tu negocio.',
       content: `
-        <Image 
-          src="/images/blog/marketing-digital-pymes.svg" 
-          alt="Marketing Digital para Pymes" 
-          style={{width: '100%', height: '300px', objectFit: 'cover', borderRadius: '8px', marginBottom: '2rem'}} 
-          lazy={true}
-          webp={true}
-        />
+        <img src="/images/blog/marketing-digital-pymes.svg" alt="Marketing Digital para Pymes" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 2rem;" />
         
         <h2>El Desafío del Marketing Digital para Pymes en Chile</h2>
         <p>Las <strong>pequeñas y medianas empresas (Pymes)</strong> representan el 99.5% de las empresas en Chile y generan el 60% del empleo nacional. Sin embargo, muchas luchan por competir digitalmente con grandes corporaciones que tienen presupuestos millonarios para marketing.</p>
@@ -1200,13 +1175,7 @@ const BlogPost = () => {
       tags: ['Diseño Web', 'Responsive', 'UX/UI', 'Mobile First'],
       metaDescription: 'Guía completa de diseño web responsive. Aprende técnicas avanzadas para crear sitios web que se adapten perfectamente a móviles, tablets y desktop.',
       content: `
-        <Image 
-          src="/images/blog/diseno-responsive.svg" 
-          alt="Diseño Web Responsive" 
-          style={{width: '100%', height: '300px', objectFit: 'cover', borderRadius: '8px', marginBottom: '2rem'}} 
-          lazy={true}
-          webp={true}
-        />
+        <img src="/images/blog/diseno-responsive.svg" alt="Diseño Web Responsive" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 2rem;" />
         
         <h2>La Era Mobile-First: Por Qué el Diseño Responsive es Fundamental</h2>
         <p>En 2025, el <strong>diseño web responsive</strong> no es una opción, es una necesidad absoluta. Con más del 58% del tráfico web mundial proveniente de dispositivos móviles, y Google priorizando la indexación mobile-first, crear sitios web que se adapten perfectamente a todos los dispositivos es crucial para el éxito online.</p>
@@ -1580,13 +1549,7 @@ const BlogPost = () => {
       metaDescription: 'Guía completa sobre automatización de procesos empresariales. Aprende a implementar soluciones tecnológicas que transformen tu negocio y aumenten la productividad.',
       content: `
         <div style="text-align: center; margin: 20px 0;">
-          <Image 
-          src="/images/blog/automatizacion-procesos.svg" 
-          alt="Automatización de Procesos Empresariales" 
-          style={{maxWidth: '100%', height: 'auto', borderRadius: '8px'}} 
-          lazy={true}
-          webp={true}
-        />
+          <img src="/images/blog/automatizacion-procesos.svg" alt="Automatización de Procesos Empresariales" style="max-width: 100%; height: auto; border-radius: 8px;" />
         </div>
         
         <h2>La Revolución de la Automatización Empresarial</h2>
@@ -1982,13 +1945,7 @@ const BlogPost = () => {
       metaDescription: 'Guía completa de SEO técnico para desarrolladores. Aprende los fundamentos técnicos del SEO que todo desarrollador debe dominar.',
       content: `
         <div style="text-align: center; margin: 20px 0;">
-          <Image 
-          src="/images/blog/seo-tecnico.svg" 
-          alt="SEO Técnico para Desarrolladores" 
-          style={{maxWidth: '100%', height: 'auto', borderRadius: '8px'}} 
-          lazy={true}
-          webp={true}
-        />
+          <img src="/images/blog/seo-tecnico.svg" alt="SEO Técnico para Desarrolladores" style="max-width: 100%; height: auto; border-radius: 8px;" />
         </div>
         
         <h2>¿Qué es el SEO Técnico?</h2>
@@ -2165,13 +2122,7 @@ const BlogPost = () => {
       metaDescription: 'Aprende técnicas probadas para optimizar el checkout de tu e-commerce, reducir el abandono del carrito y aumentar las conversiones.',
       content: `
         <div style="text-align: center; margin: 20px 0;">
-          <Image 
-          src="/images/blog/conversiones-ecommerce.svg" 
-          alt="Optimización de Conversiones E-commerce" 
-          style={{maxWidth: '100%', height: 'auto', borderRadius: '8px'}} 
-          lazy={true}
-          webp={true}
-        />
+          <img src="/images/blog/conversiones-ecommerce.svg" alt="Optimización de Conversiones E-commerce" style="max-width: 100%; height: auto; border-radius: 8px;" />
         </div>
         
         <h2>La Importancia del Checkout en E-commerce</h2>
@@ -2320,6 +2271,350 @@ const BlogPost = () => {
           
           <div style="text-align: center; margin-top: 20px;">
             <a href="/servicios" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Optimiza tu E-commerce con Nosotros</a>
+          </div>
+        </div>
+      `
+    },
+    'diseno-web-responsive-mejores-practicas-experiencia-movil-perfecta': {
+      id: 9,
+      slug: 'diseno-web-responsive-mejores-practicas-experiencia-movil-perfecta',
+      title: 'Diseño Web Responsive: Mejores Prácticas para una Experiencia Móvil Perfecta',
+      excerpt: 'Aprende las mejores prácticas de diseño responsive para crear sitios web que funcionen perfectamente en todos los dispositivos.',
+      category: 'diseno-web',
+      author: 'Sofía Martínez',
+      date: '2025-01-16',
+      readTime: '16 min',
+      views: 920,
+      tags: ['Diseño Web', 'Responsive', 'UX/UI', 'Mobile First'],
+      metaDescription: 'Guía completa de diseño web responsive. Aprende las mejores prácticas para crear sitios web que funcionen perfectamente en todos los dispositivos.',
+      content: `
+        <div style="text-align: center; margin: 20px 0;">
+          <img src="/images/blog/diseno-responsive.svg" alt="Diseño Web Responsive" style="max-width: 100%; height: auto; border-radius: 8px;" />
+        </div>
+        
+        <h2>La Era del Mobile-First</h2>
+        <p>El <strong>diseño responsive</strong> ya no es una opción, es una necesidad. Con más del 60% del tráfico web proveniente de dispositivos móviles, crear experiencias que funcionen perfectamente en todas las pantallas es fundamental para el éxito online.</p>
+        
+        <p>El enfoque mobile-first ha revolucionado la forma en que diseñamos y desarrollamos sitios web, priorizando la experiencia móvil desde el inicio del proceso de diseño.</p>
+
+        <h2>Fundamentos del Diseño Responsive</h2>
+        <p>El diseño responsive se basa en tres pilares fundamentales que trabajan juntos para crear experiencias fluidas.</p>
+        
+        <h3>1. Grillas Flexibles</h3>
+        <p>Las <strong>grillas flexibles</strong> son la base de cualquier diseño responsive exitoso.</p>
+        
+        <ul>
+          <li><strong>CSS Grid:</strong> Para layouts complejos bidimensionales</li>
+          <li><strong>Flexbox:</strong> Para componentes unidimensionales</li>
+          <li><strong>Porcentajes:</strong> En lugar de píxeles fijos</li>
+          <li><strong>Unidades relativas:</strong> rem, em, vw, vh</li>
+        </ul>
+        
+        <h3>2. Imágenes Flexibles</h3>
+        <p>Las <strong>imágenes adaptables</strong> se ajustan automáticamente al contenedor.</p>
+        
+        <ul>
+          <li><strong>max-width: 100%:</strong> Previene el desbordamiento</li>
+          <li><strong>height: auto:</strong> Mantiene las proporciones</li>
+          <li><strong>Picture element:</strong> Para diferentes resoluciones</li>
+          <li><strong>Lazy loading:</strong> Mejora el rendimiento</li>
+        </ul>
+        
+        <h3>3. Media Queries</h3>
+        <p>Las <strong>media queries</strong> permiten aplicar estilos específicos según el dispositivo.</p>
+        
+        <ul>
+          <li><strong>Breakpoints estratégicos:</strong> 320px, 768px, 1024px, 1200px</li>
+          <li><strong>Mobile-first approach:</strong> Estilos base para móvil</li>
+          <li><strong>Progressive enhancement:</strong> Mejoras para pantallas más grandes</li>
+          <li><strong>Orientation queries:</strong> Portrait vs landscape</li>
+        </ul>
+
+        <h2>Estrategia Mobile-First</h2>
+        <p>El enfoque <strong>mobile-first</strong> mejora el rendimiento y garantiza una experiencia óptima en dispositivos móviles.</p>
+        
+        <h3>Ventajas del Mobile-First</h3>
+        <ul>
+          <li><strong>Mejor rendimiento:</strong> Carga más rápida en móviles</li>
+          <li><strong>Priorización de contenido:</strong> Lo esencial primero</li>
+          <li><strong>Progressive enhancement:</strong> Mejoras graduales</li>
+          <li><strong>SEO mejorado:</strong> Google prioriza mobile-first</li>
+        </ul>
+        
+        <h3>Implementación Mobile-First</h3>
+        <ul>
+          <li><strong>Estilos base:</strong> Para pantallas pequeñas (320px+)</li>
+          <li><strong>Media queries ascendentes:</strong> min-width en lugar de max-width</li>
+          <li><strong>Contenido prioritario:</strong> Lo más importante visible primero</li>
+          <li><strong>Touch-friendly:</strong> Elementos táctiles de 44px mínimo</li>
+        </ul>
+
+        <h2>Tipografía Responsive</h2>
+        <p>La <strong>tipografía adaptable</strong> mejora la legibilidad en todos los dispositivos.</p>
+        
+        <h3>Técnicas de Tipografía Responsive</h3>
+        <ul>
+          <li><strong>Unidades relativas:</strong> rem, em para tamaños de fuente</li>
+          <li><strong>Viewport units:</strong> vw para títulos que escalen</li>
+          <li><strong>clamp():</strong> Tamaños fluidos con límites</li>
+          <li><strong>Line-height adaptativo:</strong> Mejor legibilidad</li>
+        </ul>
+        
+        <h3>Jerarquía Tipográfica</h3>
+        <ul>
+          <li><strong>Escala modular:</strong> Proporciones consistentes</li>
+          <li><strong>Contraste suficiente:</strong> Mínimo 4.5:1 para texto normal</li>
+          <li><strong>Espaciado vertical:</strong> Ritmo vertical consistente</li>
+          <li><strong>Longitud de línea:</strong> 45-75 caracteres óptimo</li>
+        </ul>
+
+        <h2>Navegación Responsive</h2>
+        <p>La <strong>navegación adaptable</strong> debe ser intuitiva en todos los dispositivos.</p>
+        
+        <h3>Patrones de Navegación Móvil</h3>
+        
+        <h4>Hamburger Menu</h4>
+        <ul>
+          <li><strong>Cuándo usar:</strong> Muchas opciones de menú</li>
+          <li><strong>Ventajas:</strong> Ahorra espacio, familiar para usuarios</li>
+          <li><strong>Desventajas:</strong> Oculta la navegación</li>
+          <li><strong>Mejores prácticas:</strong> Etiqueta "Menú" junto al ícono</li>
+        </ul>
+        
+        <h4>Tab Bar</h4>
+        <ul>
+          <li><strong>Cuándo usar:</strong> 3-5 secciones principales</li>
+          <li><strong>Ventajas:</strong> Navegación siempre visible</li>
+          <li><strong>Desventajas:</strong> Espacio limitado</li>
+          <li><strong>Mejores prácticas:</strong> Íconos + texto descriptivo</li>
+        </ul>
+        
+        <h4>Navigation Drawer</h4>
+        <ul>
+          <li><strong>Cuándo usar:</strong> Aplicaciones complejas</li>
+          <li><strong>Ventajas:</strong> Mucho espacio para opciones</li>
+          <li><strong>Desventajas:</strong> Requiere gesto para abrir</li>
+          <li><strong>Mejores prácticas:</strong> Overlay semi-transparente</li>
+        </ul>
+
+        <h2>Optimización de Rendimiento Móvil</h2>
+        <p>El <strong>rendimiento en móviles</strong> es crucial para la experiencia del usuario y el SEO.</p>
+        
+        <h3>Optimización de Imágenes</h3>
+        <ul>
+          <li><strong>Formatos modernos:</strong> WebP, AVIF para mejor compresión</li>
+          <li><strong>Responsive images:</strong> srcset y sizes attributes</li>
+          <li><strong>Lazy loading:</strong> Carga diferida de imágenes</li>
+          <li><strong>Compresión:</strong> Balance entre calidad y tamaño</li>
+        </ul>
+        
+        <h3>Optimización de CSS y JavaScript</h3>
+        <ul>
+          <li><strong>Critical CSS:</strong> Estilos críticos inline</li>
+          <li><strong>Minificación:</strong> Reducir tamaño de archivos</li>
+          <li><strong>Tree shaking:</strong> Eliminar código no utilizado</li>
+          <li><strong>Code splitting:</strong> Cargar solo lo necesario</li>
+        </ul>
+        
+        <h3>Optimización de Fuentes</h3>
+        <ul>
+          <li><strong>Font display: swap:</strong> Evitar FOIT</li>
+          <li><strong>Preload fonts:</strong> Fuentes críticas</li>
+          <li><strong>Subset fonts:</strong> Solo caracteres necesarios</li>
+          <li><strong>System fonts:</strong> Como fallback rápido</li>
+        </ul>
+
+        <h2>Testing y Debugging Responsive</h2>
+        <p>El <strong>testing exhaustivo</strong> garantiza que tu diseño funcione en todos los dispositivos.</p>
+        
+        <h3>Herramientas de Testing</h3>
+        <ul>
+          <li><strong>Chrome DevTools:</strong> Device simulation</li>
+          <li><strong>Firefox Responsive Design Mode:</strong> Testing integrado</li>
+          <li><strong>BrowserStack:</strong> Testing en dispositivos reales</li>
+          <li><strong>Responsinator:</strong> Vista rápida de múltiples tamaños</li>
+        </ul>
+        
+        <h3>Dispositivos de Testing Prioritarios</h3>
+        <ul>
+          <li><strong>iPhone (varios modelos):</strong> iOS Safari</li>
+          <li><strong>Samsung Galaxy:</strong> Android Chrome</li>
+          <li><strong>iPad:</strong> Tablet experience</li>
+          <li><strong>Desktop:</strong> Chrome, Firefox, Safari, Edge</li>
+        </ul>
+
+        <h2>Frameworks y Herramientas Responsive</h2>
+        <p>Los <strong>frameworks</strong> pueden acelerar el desarrollo responsive.</p>
+        
+        <h3>CSS Frameworks</h3>
+        
+        <h4>Bootstrap</h4>
+        <ul>
+          <li><strong>Ventajas:</strong> Maduro, bien documentado, gran comunidad</li>
+          <li><strong>Desventajas:</strong> Pesado, diseños similares</li>
+          <li><strong>Mejor para:</strong> Prototipos rápidos, equipos grandes</li>
+        </ul>
+        
+        <h4>Tailwind CSS</h4>
+        <ul>
+          <li><strong>Ventajas:</strong> Utility-first, altamente customizable</li>
+          <li><strong>Desventajas:</strong> Curva de aprendizaje, HTML verboso</li>
+          <li><strong>Mejor para:</strong> Diseños únicos, control granular</li>
+        </ul>
+        
+        <h4>Bulma</h4>
+        <ul>
+          <li><strong>Ventajas:</strong> Solo CSS, flexbox-based, moderno</li>
+          <li><strong>Desventajas:</strong> Menos componentes que Bootstrap</li>
+          <li><strong>Mejor para:</strong> Proyectos sin JavaScript framework</li>
+        </ul>
+
+        <h2>Accesibilidad en Diseño Responsive</h2>
+        <p>La <strong>accesibilidad</strong> debe ser considerada en todos los tamaños de pantalla.</p>
+        
+        <h3>Principios de Accesibilidad Responsive</h3>
+        <ul>
+          <li><strong>Contraste suficiente:</strong> En todos los dispositivos</li>
+          <li><strong>Tamaños táctiles:</strong> Mínimo 44px para elementos interactivos</li>
+          <li><strong>Navegación por teclado:</strong> Funcional en todos los tamaños</li>
+          <li><strong>Screen readers:</strong> Contenido accesible en móvil</li>
+        </ul>
+        
+        <h3>Testing de Accesibilidad</h3>
+        <ul>
+          <li><strong>axe DevTools:</strong> Auditoría automática</li>
+          <li><strong>WAVE:</strong> Evaluación visual de accesibilidad</li>
+          <li><strong>Lighthouse:</strong> Auditoría integral incluyendo accesibilidad</li>
+          <li><strong>Screen readers:</strong> Testing manual con NVDA, JAWS</li>
+        </ul>
+
+        <div class="cta-section">
+          <h3>¿Necesitas un Diseño Web Responsive Profesional?</h3>
+          <p>En <strong>ET Agency</strong>, creamos sitios web responsive que no solo se ven increíbles en todos los dispositivos, sino que también ofrecen una experiencia de usuario excepcional y están optimizados para conversiones.</p>
+          
+          <p><strong>Nuestros servicios de diseño responsive incluyen:</strong></p>
+          <ul>
+            <li>Diseño mobile-first personalizado</li>
+            <li>Optimización de rendimiento para móviles</li>
+            <li>Testing exhaustivo en dispositivos reales</li>
+            <li>Implementación de mejores prácticas de UX/UI</li>
+            <li>Optimización para SEO y conversiones</li>
+            <li>Soporte continuo y actualizaciones</li>
+          </ul>
+          
+          <p>📱 <strong>¡Haz que tu sitio web sea perfecto en todos los dispositivos!</strong> Contáctanos para una consulta gratuita y descubre cómo podemos transformar tu presencia digital con un diseño responsive de clase mundial.</p>
+          
+          <div style="text-align: center; margin-top: 20px;">
+            <a href="/servicios" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Transforma tu Sitio Web con Nosotros</a>
+          </div>
+        </div>
+      `
+    },
+    'automatizacion-procesos-empresariales-como-tecnologia-transformar-negocio': {
+      id: 10,
+      slug: 'automatizacion-procesos-empresariales-como-tecnologia-transformar-negocio',
+      title: 'Automatización de Procesos Empresariales: Cómo la Tecnología Puede Transformar tu Negocio',
+      excerpt: 'Descubre cómo la automatización puede optimizar tus procesos empresariales, reducir costos y aumentar la eficiencia.',
+      category: 'tecnologia',
+      author: 'Roberto Fernández',
+      date: '2025-01-18',
+      readTime: '20 min',
+      views: 1250,
+      tags: ['Automatización', 'Procesos', 'Eficiencia', 'Tecnología'],
+      metaDescription: 'Guía completa sobre automatización de procesos empresariales. Aprende a implementar soluciones tecnológicas que transformen tu negocio y aumenten la productividad.',
+      content: `
+        <div style="text-align: center; margin: 20px 0;">
+          <img src="/images/blog/automatizacion-procesos.svg" alt="Automatización de Procesos Empresariales" style="max-width: 100%; height: auto; border-radius: 8px;" />
+        </div>
+        
+        <h2>La Revolución de la Automatización Empresarial</h2>
+        <p>La <strong>automatización de procesos empresariales</strong> ha dejado de ser una ventaja competitiva para convertirse en una necesidad fundamental. En un mundo donde la eficiencia y la velocidad determinan el éxito, las empresas que no adopten la automatización se quedarán atrás.</p>
+        
+        <p>La automatización no se trata solo de reemplazar trabajos humanos con máquinas. Se trata de liberar a tu equipo de tareas repetitivas y de bajo valor para que puedan enfocarse en actividades estratégicas que realmente impulsen el crecimiento del negocio.</p>
+
+        <h2>¿Qué es la Automatización de Procesos Empresariales?</h2>
+        <p>La <strong>automatización de procesos empresariales (BPA)</strong> es el uso de tecnología para ejecutar procesos de negocio recurrentes con mínima intervención humana. Incluye desde simples automatizaciones de email hasta complejos workflows que integran múltiples sistemas.</p>
+        
+        <h3>Tipos de Automatización Empresarial:</h3>
+        
+        <h4>Automatización de Tareas (Task Automation)</h4>
+        <ul>
+          <li><strong>Definición:</strong> Automatización de tareas individuales y repetitivas</li>
+          <li><strong>Ejemplos:</strong> Envío de emails, generación de reportes, backup de datos</li>
+          <li><strong>Beneficios:</strong> Ahorro de tiempo inmediato, reducción de errores</li>
+        </ul>
+        
+        <h4>Automatización de Procesos (Process Automation)</h4>
+        <ul>
+          <li><strong>Definición:</strong> Automatización de flujos de trabajo completos</li>
+          <li><strong>Ejemplos:</strong> Proceso de contratación, aprobación de gastos, onboarding</li>
+          <li><strong>Beneficios:</strong> Consistencia, trazabilidad, eficiencia operacional</li>
+        </ul>
+        
+        <h4>Automatización Inteligente (Intelligent Automation)</h4>
+        <ul>
+          <li><strong>Definición:</strong> Combinación de IA, ML y automatización tradicional</li>
+          <li><strong>Ejemplos:</strong> Chatbots, análisis predictivo, toma de decisiones automatizada</li>
+          <li><strong>Beneficios:</strong> Adaptabilidad, aprendizaje continuo, decisiones inteligentes</li>
+        </ul>
+
+        <h2>Beneficios Tangibles de la Automatización</h2>
+        <p>Los <strong>beneficios de la automatización</strong> van mucho más allá del simple ahorro de tiempo. Impactan directamente en la rentabilidad y competitividad de tu empresa.</p>
+        
+        <h3>Beneficios Cuantificables:</h3>
+        
+        <h4>Reducción de Costos Operativos</h4>
+        <ul>
+          <li><strong>30-50%</strong> reducción en costos de procesamiento manual</li>
+          <li><strong>60-80%</strong> reducción en tiempo de procesamiento</li>
+          <li><strong>90%</strong> reducción en errores humanos</li>
+          <li><strong>24/7</strong> operación sin costos adicionales de personal</li>
+        </ul>
+        
+        <h4>Mejora en Productividad</h4>
+        <ul>
+          <li><strong>40%</strong> aumento en productividad del equipo</li>
+          <li><strong>70%</strong> reducción en tiempo de ciclo de procesos</li>
+          <li><strong>85%</strong> mejora en cumplimiento de SLAs</li>
+          <li><strong>50%</strong> aumento en capacidad de procesamiento</li>
+        </ul>
+        
+        <h3>Beneficios Cualitativos:</h3>
+        
+        <h4>Mejora en la Experiencia del Cliente</h4>
+        <ul>
+          <li><strong>Respuestas más rápidas:</strong> Atención 24/7 automatizada</li>
+          <li><strong>Consistencia:</strong> Mismo nivel de servicio siempre</li>
+          <li><strong>Personalización:</strong> Respuestas adaptadas al cliente</li>
+          <li><strong>Proactividad:</strong> Anticipación a necesidades del cliente</li>
+        </ul>
+        
+        <h4>Mejora en la Experiencia del Empleado</h4>
+        <ul>
+          <li><strong>Eliminación de tareas tediosas:</strong> Más tiempo para trabajo creativo</li>
+          <li><strong>Reducción de estrés:</strong> Menos presión por tareas repetitivas</li>
+          <li><strong>Desarrollo profesional:</strong> Oportunidades de aprender nuevas habilidades</li>
+          <li><strong>Mayor satisfacción:</strong> Trabajo más significativo y estratégico</li>
+        </ul>
+
+        <div class="cta-section">
+          <h3>¿Listo para Transformar tu Negocio con Automatización?</h3>
+          <p>En <strong>ET Agency</strong>, somos expertos en automatización de procesos empresariales. Hemos ayudado a más de 150 empresas a transformar sus operaciones, reducir costos y aumentar la eficiencia a través de soluciones de automatización personalizadas.</p>
+          
+          <p><strong>Nuestros servicios de automatización incluyen:</strong></p>
+          <ul>
+            <li>Auditoría y mapeo de procesos actuales</li>
+            <li>Diseño de soluciones de automatización personalizadas</li>
+            <li>Implementación de RPA y workflow automation</li>
+            <li>Integración de sistemas y APIs</li>
+            <li>Gestión del cambio y capacitación</li>
+            <li>Soporte continuo y optimización</li>
+          </ul>
+          
+          <p>🤖 <strong>¡Automatiza tu camino al éxito!</strong> Contáctanos para una consulta gratuita y descubre cómo la automatización puede transformar tu negocio y llevarlo al siguiente nivel.</p>
+          
+          <div style="text-align: center; margin-top: 20px;">
+            <a href="/servicios" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Impulsa tu Negocio con Automatización</a>
           </div>
         </div>
       `
