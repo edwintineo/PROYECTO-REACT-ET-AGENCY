@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter, Palette } from 'lucide-react'
+import { Image } from './common'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -34,11 +35,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="mb-8">
-            <Link to="/" className="flex items-center mb-4">
-              <img 
-                src="/src/assets/laptop-logo.svg"
+            <Link to="/" className="flex items-center justify-center mb-4">
+              <Image 
+                src="/src/assets/laptop-footer..webp"
                 alt="ET Agency - Agencia de Marketing Digital" 
-                className="h-16 w-auto"
+                className="h-28 w-auto mx-auto"
+                lazy={false}
+                webp={true}
               />
             </Link>
             <p className="text-gray-300 dark:text-gray-400 mb-6 leading-relaxed">

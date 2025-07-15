@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, Calendar, User, TrendingUp } from 'lucide-react';
 import { getRecentProjects } from '../../utils/portfolioUtils';
+// Removed OptimizedPortfolioImage import - using direct image paths from portfolio.json
 
 const PortfolioHighlight = () => {
   const recentProjects = getRecentProjects(3);
@@ -63,14 +64,20 @@ const PortfolioHighlight = () => {
               className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
             >
               {/* Project Image */}
-              <div className="relative h-64 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
-                {/* Placeholder for project image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/90 to-purple-600/90 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <div className="text-4xl font-bold mb-2">{project.client}</div>
-                    <div className="text-lg opacity-90">{project.category}</div>
-                  </div>
-                </div>
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                  onError={(e) => {
+                    e.target.style.background = 'linear-gradient(135deg, #3B82F6, #8B5CF6)';
+                    e.target.style.display = 'flex';
+                    e.target.style.alignItems = 'center';
+                    e.target.style.justifyContent = 'center';
+                    e.target.innerHTML = `<span style="color: white; font-weight: bold;">${project.title}</span>`;
+                  }}
+                />
                 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>

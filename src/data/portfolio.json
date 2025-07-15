@@ -2,153 +2,525 @@
   "projects": [
     {
       "id": 1,
-      "title": "Boutique Luna - E-commerce de Moda",
+      "title": "Carpediem Online - Tienda Online",
       "category": "E-commerce",
-      "description": "Tienda online completa para boutique de moda femenina con integración de pagos chilenos y gestión de inventario.",
-      "image": "/images/portfolio/boutique-luna.svg",
-      "technologies": ["React", "Node.js", "Webpay Plus", "MongoDB"],
+      "description": "Tienda online completa con catálogo de productos y sistema de pagos integrado.",
+      "image": "/images/portfolio/carpediem-online.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
       "features": [
         "Catálogo de productos dinámico",
-        "Carrito de compras avanzado",
-        "Integración Webpay Plus",
-        "Panel de administración",
-        "Sistema de inventario",
-        "Envíos automatizados"
+        "Carrito de compras",
+        "Sistema de pagos",
+        "Panel de administración"
       ],
       "url": "/contacto",
-      "client": "Boutique Luna",
+      "client": "Carpediem Online",
       "year": 2024,
-      "duration": "3 meses",
-      "results": {
-        "salesIncrease": "300%",
-        "conversionRate": "4.2%",
-        "pageSpeed": "95/100"
-      }
+      "duration": "2 meses"
     },
     {
       "id": 2,
-      "title": "Ferretería El Martillo - Sitio Corporativo",
-      "category": "Sitio Web",
-      "description": "Sitio web corporativo para ferretería familiar con catálogo de productos y sistema de cotizaciones.",
-      "image": "/images/portfolio/ferreteria-martillo.svg",
-      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL"],
+      "title": "Marbelma - Tienda Online",
+      "category": "E-commerce",
+      "description": "E-commerce especializado en productos de mármol y materiales de construcción.",
+      "image": "/images/portfolio/marbelma.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
       "features": [
-        "Catálogo de productos",
+        "Catálogo especializado",
         "Sistema de cotizaciones",
-        "Mapa de sucursales",
-        "Blog corporativo",
-        "Formularios de contacto",
-        "Optimización SEO"
+        "Galería de proyectos",
+        "Integración de pagos"
       ],
       "url": "/contacto",
-      "client": "Ferretería El Martillo",
+      "client": "Marbelma",
       "year": 2024,
-      "duration": "2 meses",
-      "results": {
-        "trafficIncrease": "250%",
-        "leadGeneration": "180%",
-        "pageSpeed": "92/100"
-      }
+      "duration": "3 meses"
     },
     {
       "id": 3,
-      "title": "Pastelería Dulce Hogar - E-commerce",
-      "category": "E-commerce",
-      "description": "Tienda online para pastelería artesanal con sistema de pedidos personalizados y calendario de entregas.",
-      "image": "/images/portfolio/pasteleria-dulce.svg",
-      "technologies": ["React", "Express.js", "Flow", "PostgreSQL"],
+      "title": "Cimientos Asesores - Página Web",
+      "category": "Sitio Web",
+      "description": "Sitio web corporativo para empresa de asesoría en construcción y proyectos.",
+      "image": "/images/portfolio/cimientos-asesores.webp",
+      "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
       "features": [
-        "Pedidos personalizados",
-        "Calendario de entregas",
-        "Galería de productos",
-        "Sistema de reseñas",
-        "Integración Flow",
-        "Notificaciones automáticas"
+        "Portafolio de servicios",
+        "Galería de proyectos",
+        "Blog corporativo",
+        "Formularios de contacto"
       ],
       "url": "/contacto",
-      "client": "Pastelería Dulce Hogar",
+      "client": "Cimientos Asesores",
       "year": 2024,
-      "duration": "2.5 meses",
-      "results": {
-        "orderIncrease": "400%",
-        "customerSatisfaction": "98%",
-        "pageSpeed": "94/100"
-      }
+      "duration": "2 meses"
     },
     {
       "id": 4,
-      "title": "Clínica Dental Sonrisa - Sitio Web",
-      "category": "Sitio Web",
-      "description": "Sitio web profesional para clínica dental con sistema de citas online y información de servicios.",
-      "image": "/images/portfolio/clinica-sonrisa.jpg",
-      "technologies": ["Vue.js", "Laravel", "MySQL", "Stripe"],
+      "title": "Energia Sexy - Tienda Online",
+      "category": "E-commerce",
+      "description": "Tienda online de productos energéticos y suplementos deportivos.",
+      "image": "/images/portfolio/energia-sexy.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
       "features": [
-        "Sistema de citas online",
-        "Información de servicios",
-        "Galería de casos",
-        "Blog médico",
-        "Formularios de contacto",
-        "Integración con calendario"
+        "Catálogo de productos",
+        "Sistema de suscripciones",
+        "Blog de nutrición",
+        "Programa de afiliados"
       ],
       "url": "/contacto",
-      "client": "Clínica Dental Sonrisa",
-      "year": 2023,
-      "duration": "3 meses",
-      "results": {
-        "appointmentIncrease": "200%",
-        "patientSatisfaction": "96%",
-        "pageSpeed": "91/100"
-      }
+      "client": "Energia Sexy",
+      "year": 2024,
+      "duration": "2.5 meses"
     },
     {
       "id": 5,
-      "title": "Restaurante Sabores - App de Delivery",
-      "category": "Aplicación",
-      "description": "Aplicación móvil para restaurante con sistema de delivery y pagos integrados.",
-      "image": "/images/portfolio/restaurante-sabores.jpg",
-      "technologies": ["React Native", "Node.js", "MongoDB", "Mercado Pago"],
+      "title": "Stec Ingenieria - Página Web",
+      "category": "Sitio Web",
+      "description": "Sitio web corporativo para empresa de ingeniería y servicios técnicos.",
+      "image": "/images/portfolio/stec-ingenieria.webp",
+      "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
       "features": [
-        "Menú digital interactivo",
-        "Sistema de delivery",
-        "Tracking de pedidos",
-        "Programa de fidelidad",
-        "Integración Mercado Pago",
-        "Notificaciones push"
+        "Portafolio de servicios",
+        "Casos de éxito",
+        "Equipo profesional",
+        "Certificaciones"
       ],
       "url": "/contacto",
-      "client": "Restaurante Sabores",
-      "year": 2023,
-      "duration": "4 meses",
-      "results": {
-        "deliveryOrders": "500%",
-        "customerRetention": "85%",
-        "appRating": "4.8/5"
-      }
+      "client": "Stec Ingenieria",
+      "year": 2024,
+      "duration": "3 meses"
     },
     {
       "id": 6,
-      "title": "Inmobiliaria Hogar - Portal Web",
-      "category": "Portal Web",
-      "description": "Portal inmobiliario con búsqueda avanzada, tours virtuales y sistema de contacto con agentes.",
-      "image": "/images/portfolio/inmobiliaria-hogar.jpg",
-      "technologies": ["Next.js", "Prisma", "PostgreSQL", "Cloudinary"],
+      "title": "Bingo Store - Tienda Online",
+      "category": "E-commerce",
+      "description": "Tienda online de juegos, entretenimiento y productos de bingo.",
+      "image": "/images/portfolio/bingo-store.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
       "features": [
-        "Búsqueda avanzada de propiedades",
-        "Tours virtuales 360°",
-        "Sistema de favoritos",
-        "Chat con agentes",
-        "Calculadora de crédito",
-        "Mapa interactivo"
+        "Catálogo de juegos",
+        "Sistema de reservas",
+        "Eventos especiales",
+        "Programa de puntos"
       ],
       "url": "/contacto",
-      "client": "Inmobiliaria Hogar",
-      "year": 2023,
-      "duration": "5 meses",
-      "results": {
-        "propertyViews": "350%",
-        "leadQuality": "90%",
-        "pageSpeed": "93/100"
-      }
+      "client": "Bingo Store",
+      "year": 2024,
+      "duration": "2 meses"
+    },
+    {
+      "id": 7,
+      "title": "Tecservin - Página Web",
+      "category": "Sitio Web",
+      "description": "Sitio web para empresa de servicios técnicos y mantenimiento industrial.",
+      "image": "/images/portfolio/tecservin.webp",
+      "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Servicios técnicos",
+        "Mantenimiento industrial",
+        "Certificaciones",
+        "Contacto directo"
+      ],
+      "url": "/contacto",
+      "client": "Tecservin",
+      "year": 2024,
+      "duration": "1.5 meses"
+    },
+    {
+      "id": 8,
+      "title": "Pallets Ray - Página Web",
+      "category": "Sitio Web",
+      "description": "Sitio web para empresa especializada en fabricación y venta de pallets.",
+      "image": "/images/portfolio/pallets-ray.webp",
+      "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Catálogo de productos",
+        "Servicios de fabricación",
+        "Galería de proyectos",
+        "Cotizaciones online"
+      ],
+      "url": "/contacto",
+      "client": "Pallets Ray",
+      "year": 2024,
+      "duration": "2 meses"
+    },
+    {
+      "id": 9,
+      "title": "Asanar Centro Medico - Reserva de Citas",
+      "category": "Aplicación",
+      "description": "Sistema de reserva de citas médicas online con gestión de pacientes.",
+      "image": "/images/portfolio/asanar-centro-medico.webp",
+      "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Reserva de citas online",
+        "Gestión de pacientes",
+        "Historial médico",
+        "Notificaciones automáticas"
+      ],
+      "url": "/contacto",
+      "client": "Asanar Centro Medico",
+      "year": 2024,
+      "duration": "4 meses"
+    },
+    {
+      "id": 10,
+      "title": "Club 90 - Restaurante, Tienda Online",
+      "category": "E-commerce",
+      "description": "Plataforma completa para restaurante con delivery y tienda online.",
+      "image": "/images/portfolio/club-90.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Menú digital",
+        "Sistema de delivery",
+        "Reservas de mesa",
+        "Tienda online"
+      ],
+      "url": "/contacto",
+      "client": "Club 90",
+      "year": 2024,
+      "duration": "3.5 meses"
+    },
+    {
+      "id": 11,
+      "title": "Wayku Peruano - Página Web, Restaurante",
+      "category": "Sitio Web",
+      "description": "Sitio web para restaurante peruano con menú digital y reservas.",
+      "image": "/images/portfolio/wayku-peruano.webp",
+      "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Menú interactivo",
+        "Reservas online",
+        "Galería gastronómica",
+        "Eventos especiales"
+      ],
+      "url": "/contacto",
+      "client": "Wayku Peruano",
+      "year": 2024,
+      "duration": "2.5 meses"
+    },
+    {
+      "id": 12,
+      "title": "ADC Arquitectura - Página Web",
+      "category": "Sitio Web",
+      "description": "Sitio web para estudio de arquitectura con portafolio de proyectos.",
+      "image": "/images/portfolio/adc-arquitectura.webp",
+      "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Portafolio de proyectos",
+        "Servicios arquitectónicos",
+        "Equipo profesional",
+        "Blog de arquitectura"
+      ],
+      "url": "/contacto",
+      "client": "ADC Arquitectura",
+      "year": 2024,
+      "duration": "3 meses"
+    },
+    {
+      "id": 13,
+      "title": "Mailon Propiedades - Inmobiliaria, Página Web",
+      "category": "Portal Web",
+      "description": "Portal inmobiliario con búsqueda avanzada y gestión de propiedades.",
+      "image": "/images/portfolio/mailon-propiedades.webp",
+      "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Búsqueda de propiedades",
+        "Tours virtuales",
+        "Calculadora de crédito",
+        "Gestión de agentes"
+      ],
+      "url": "/contacto",
+      "client": "Mailon Propiedades",
+      "year": 2024,
+      "duration": "4 meses"
+    },
+    {
+      "id": 14,
+      "title": "Sensation Free - Tienda Online",
+      "category": "E-commerce",
+      "description": "Tienda online de productos de bienestar y cuidado personal.",
+      "image": "/images/portfolio/sensation-free.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Catálogo de bienestar",
+        "Suscripciones mensuales",
+        "Blog de salud",
+        "Programa de lealtad"
+      ],
+      "url": "/contacto",
+      "client": "Sensation Free",
+      "year": 2024,
+      "duration": "2.5 meses"
+    },
+    {
+      "id": 15,
+      "title": "Maestro del Mueble - One Page",
+      "category": "One Page",
+      "description": "Página única para empresa de muebles con catálogo y contacto directo.",
+      "image": "/images/portfolio/maestro-del-mueble.webp",
+      "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Catálogo de muebles",
+        "Galería de proyectos",
+        "Contacto directo",
+        "Animaciones suaves"
+      ],
+      "url": "/contacto",
+      "client": "Maestro del Mueble",
+      "year": 2024,
+      "duration": "1 mes"
+    },
+    {
+      "id": 16,
+      "title": "Saldias Instalaciones Sanitarias - Página Web",
+      "category": "Sitio Web",
+      "description": "Sitio web para empresa de instalaciones sanitarias y plomería.",
+      "image": "/images/portfolio/saldias-instalaciones.webp",
+      "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Servicios de plomería",
+        "Instalaciones sanitarias",
+        "Emergencias 24/7",
+        "Galería de trabajos"
+      ],
+      "url": "/contacto",
+      "client": "Saldias Instalaciones",
+      "year": 2024,
+      "duration": "1.5 meses"
+    },
+    {
+      "id": 17,
+      "title": "Varitech - Página Web",
+      "category": "Sitio Web",
+      "description": "Sitio web para empresa de tecnología y soluciones digitales.",
+      "image": "/images/portfolio/varitech.webp",
+      "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Soluciones tecnológicas",
+        "Casos de éxito",
+        "Equipo técnico",
+        "Blog tecnológico"
+      ],
+      "url": "/contacto",
+      "client": "Varitech",
+      "year": 2024,
+      "duration": "2.5 meses"
+    },
+    {
+      "id": 18,
+      "title": "BMC Store - Tienda Online",
+      "category": "E-commerce",
+      "description": "Tienda online de productos electrónicos y tecnología.",
+      "image": "/images/portfolio/bmc-store.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Catálogo tecnológico",
+        "Comparador de productos",
+        "Garantías extendidas",
+        "Soporte técnico"
+      ],
+      "url": "/contacto",
+      "client": "BMC Store",
+      "year": 2024,
+      "duration": "3 meses"
+    },
+    {
+      "id": 19,
+      "title": "Tekno Kont - Tienda Online",
+      "category": "E-commerce",
+      "description": "E-commerce especializado en contabilidad y software empresarial.",
+      "image": "/images/portfolio/tekno-kont.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Software contable",
+        "Licencias digitales",
+        "Soporte especializado",
+        "Capacitaciones online"
+      ],
+      "url": "/contacto",
+      "client": "Tekno Kont",
+      "year": 2024,
+      "duration": "3.5 meses"
+    },
+    {
+      "id": 20,
+      "title": "Deco Larrondo - Tienda Online",
+      "category": "E-commerce",
+      "description": "Tienda online de decoración y artículos para el hogar.",
+      "image": "/images/portfolio/deco-larrondo.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Catálogo de decoración",
+        "Inspiración de diseño",
+        "Asesoría personalizada",
+        "Envíos a domicilio"
+      ],
+      "url": "/contacto",
+      "client": "Deco Larrondo",
+      "year": 2024,
+      "duration": "2 meses"
+    },
+    {
+      "id": 21,
+      "title": "Full Time - Tienda Online",
+      "category": "E-commerce",
+      "description": "Tienda de cerco eléctrico, cctv, cámaras, vigilancia.",
+      "image": "/images/portfolio/full-time.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Cerco eléctrico residencial",
+        "Sistemas CCTV profesionales",
+        "Cámaras de vigilancia IP",
+        "Monitoreo 24/7"
+      ],
+      "url": "/contacto",
+      "client": "Full Time",
+      "year": 2024,
+      "duration": "2.5 meses"
+    },
+    {
+      "id": 22,
+      "title": "Plegados Y Metales - Página Web",
+      "category": "Sitio Web",
+      "description": "Sitio web para empresa de plegados y trabajos en metal.",
+      "image": "/images/portfolio/plegados-metales.webp",
+      "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Servicios de plegado",
+        "Trabajos en metal",
+        "Galería de proyectos",
+        "Cotizaciones online"
+      ],
+      "url": "/contacto",
+      "client": "Plegados Y Metales",
+      "year": 2024,
+      "duration": "2 meses"
+    },
+    {
+      "id": 23,
+      "title": "Marcel Fischer - Página Web",
+      "category": "Sitio Web",
+      "description": "Sitio web personal profesional con portafolio y servicios.",
+      "image": "/images/portfolio/marcel-fischer.webp",
+      "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Portafolio personal",
+        "Servicios profesionales",
+        "Blog personal",
+        "Contacto directo"
+      ],
+      "url": "/contacto",
+      "client": "Marcel Fischer",
+      "year": 2024,
+      "duration": "1.5 meses"
+    },
+    {
+      "id": 24,
+      "title": "Corretaje Araucania - Inmobiliaria, Página Web",
+      "category": "Portal Web",
+      "description": "Portal inmobiliario regional con propiedades de la Araucanía.",
+      "image": "/images/portfolio/corretaje-araucania.webp",
+      "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Propiedades regionales",
+        "Búsqueda geolocalizada",
+        "Agentes especializados",
+        "Tasaciones online"
+      ],
+      "url": "/contacto",
+      "client": "Corretaje Araucania",
+      "year": 2024,
+      "duration": "3.5 meses"
+    },
+    {
+      "id": 25,
+      "title": "Almacen de Hilados - Tienda Online",
+      "category": "E-commerce",
+      "description": "Tienda online especializada en hilados y materiales de costura.",
+      "image": "/images/portfolio/almacen-hilados.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Catálogo de hilados",
+        "Materiales de costura",
+        "Tutoriales de tejido",
+        "Envíos especializados"
+      ],
+      "url": "/contacto",
+      "client": "Almacen de Hilados",
+      "year": 2024,
+      "duration": "2 meses"
+    },
+    {
+      "id": 26,
+      "title": "Accesorios de Bebe - Tienda Online",
+      "category": "E-commerce",
+      "description": "E-commerce especializado en productos y accesorios para bebés.",
+      "image": "/images/portfolio/accesorios-bebe.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Productos para bebés",
+        "Guías de cuidado",
+        "Lista de deseos",
+        "Programa de lealtad"
+      ],
+      "url": "/contacto",
+      "client": "Accesorios de Bebe",
+      "year": 2024,
+      "duration": "2.5 meses"
+    },
+    {
+      "id": 27,
+      "title": "Aceite de Oliva Eyes - Tienda Online",
+      "category": "E-commerce",
+      "description": "Tienda online de aceites de oliva premium y productos gourmet.",
+      "image": "/images/portfolio/aceite-oliva-eyes.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Aceites premium",
+        "Productos gourmet",
+        "Suscripciones mensuales",
+        "Recetas exclusivas"
+      ],
+      "url": "/contacto",
+      "client": "Aceite de Oliva Eyes",
+      "year": 2024,
+      "duration": "2 meses"
+    },
+    {
+      "id": 28,
+      "title": "Berkese - Tienda Online",
+      "category": "E-commerce",
+      "description": "Especialistas en la aplicación de recubrimientos protectores.",
+      "image": "/images/portfolio/berkese.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Productos de belleza",
+        "Cuidado personal",
+        "Consejos de belleza",
+        "Programa VIP"
+      ],
+      "url": "/contacto",
+      "client": "Berkese",
+      "year": 2024,
+      "duration": "2.5 meses"
+    },
+    {
+      "id": 29,
+      "title": "Serv Cel Syc - Tienda Online",
+      "category": "E-commerce",
+      "description": "Tienda online de servicios y accesorios para celulares.",
+      "image": "/images/portfolio/serv-cel-syc.webp",
+      "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
+      "features": [
+        "Reparación de celulares",
+        "Accesorios móviles",
+        "Servicio técnico",
+        "Garantías extendidas"
+      ],
+      "url": "/contacto",
+      "client": "Serv Cel Syc",
+      "year": 2024,
+      "duration": "2 meses"
     }
   ]
 }

@@ -1,14 +1,17 @@
 import portfolioData from '../data/portfolio.json';
 
 /**
- * Obtiene los proyectos más recientes del portafolio
- * @param {number} limit - Número de proyectos a retornar
- * @returns {Array} Array de proyectos ordenados por año (más recientes primero)
+ * Obtiene los proyectos destacados para la página de inicio
+ * @param {number} limit - Número de proyectos a retornar (no usado, siempre devuelve los 3 destacados)
+ * @returns {Array} Array de proyectos destacados específicos
  */
 export const getRecentProjects = (limit = 3) => {
+  // IDs de los proyectos destacados seleccionados para la página de inicio
+  const featuredProjectIds = [9, 12, 28]; // Asanar Centro Medico, ADC Arquitectura, Berkese
+  
   return portfolioData.projects
-    .sort((a, b) => b.year - a.year || b.id - a.id)
-    .slice(0, limit);
+    .filter(project => featuredProjectIds.includes(project.id))
+    .sort((a, b) => featuredProjectIds.indexOf(a.id) - featuredProjectIds.indexOf(b.id));
 };
 
 /**

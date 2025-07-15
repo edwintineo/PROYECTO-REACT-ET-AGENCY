@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Helmet } from 'react-helmet' // Importar Helmet
 import { motion } from 'framer-motion'
 import {
   Mail,
@@ -20,6 +19,7 @@ import {
   Shield,
   Zap
 } from 'lucide-react'
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -49,8 +49,9 @@ const Contact = () => {
     
     // Simular envío del formulario
     setTimeout(() => {
-      setIsSubmitting(false)
       setIsSubmitted(true)
+      setIsSubmitting(false)
+      
       // Reset form after 3 seconds
       setTimeout(() => {
         setIsSubmitted(false)
@@ -65,7 +66,7 @@ const Contact = () => {
           message: ''
         })
       }, 3000)
-    }, 2000)
+    }, 1000)
   }
 
   const contactInfo = [
@@ -153,12 +154,14 @@ const Contact = () => {
     }
   ]
 
+
+
   return (
     <>
-      <Helmet>
-        <title>Contacto | Solicita tu Cotización Gratuita - ET Agency</title>
-        <meta name="description" content="Contáctanos para solicitar una cotización gratuita para tu proyecto de diseño web, e-commerce o marketing digital en Chile. ¡Estamos listos para ayudarte!" />
-      </Helmet>
+      <SEO 
+        title="Contacto - ET Agency | Solicita tu Cotización" 
+        description="Contáctanos para solicitar una cotización gratuita de tu proyecto web. Estamos aquí para ayudarte a hacer crecer tu negocio online." 
+      />
       <div className="pt-20">
         {/* Hero Section */}
         <section className="gradient-bg section-padding">
@@ -491,6 +494,8 @@ const Contact = () => {
                       </>
                     )}
                   </button>
+
+
                 </form>
               )}
             </motion.div>
