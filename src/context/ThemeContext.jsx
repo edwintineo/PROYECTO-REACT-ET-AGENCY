@@ -11,21 +11,36 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false); // Siempre en modo claro
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Check localStorage first
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+      return saved === 'dark';
+    }
+    // Default to light mode instead of system preference
+    return false;
+  });
 
   useEffect(() => {
-    // Limpiar cualquier configuración de tema anterior
-    localStorage.removeItem('theme');
-    document.documentElement.classList.remove('dark');
-  }, []);
+    // Update localStorage when theme changes
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    
+    // Update document class
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
 
-  // La función toggleTheme ahora no hace nada
-  const toggleTheme = () => {};
+  const toggleTheme = () => {
+    setIsDarkMode(prev => !prev);
+  };
 
   const value = {
-    isDarkMode: false,
+    isDarkMode,
     toggleTheme,
-    theme: 'light'
+    theme: isDarkMode ? 'dark' : 'light'
   };
 
   return (

@@ -126,8 +126,19 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */
+          {/* Theme Toggle & CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
+            <button
+              onClick={toggleTheme}
+              className={`p-2 rounded-lg transition-colors duration-200 ${
+                isScrolled 
+                  ? 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800' 
+                  : 'text-gray-900 dark:text-white hover:bg-white/10 dark:hover:bg-gray-800/50'
+              }`}
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
             <Link
               to="/contacto"
               className={`px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ${
@@ -140,8 +151,19 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Mobile menu button */
+          {/* Mobile menu button */}
           <div className="lg:hidden flex items-center space-x-2">
+            <button
+              onClick={toggleTheme}
+              className={`p-2 rounded-lg transition-colors duration-200 ${
+                isScrolled 
+                  ? 'text-gray-700 dark:text-gray-300' 
+                  : 'text-gray-900 dark:text-white'
+              }`}
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`p-2 rounded-md ${
