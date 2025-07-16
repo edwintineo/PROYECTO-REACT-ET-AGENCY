@@ -156,7 +156,7 @@ class DataService {
               'Link building',
               'Reportes mensuales'
             ],
-            price: 'Desde $299/mes',
+            price: 'Desde $199.990',
             popular: true
           },
           {
@@ -170,7 +170,7 @@ class DataService {
               'SEO técnico',
               'Mantenimiento incluido'
             ],
-            price: 'Desde $1,299'
+            price: 'Desde $299.990'
           },
           {
             id: 'digital-marketing',
@@ -183,7 +183,7 @@ class DataService {
               'Email marketing',
               'Análisis de resultados'
             ],
-            price: 'Desde $499/mes'
+            price: 'Desde $199.990'
           }
         ]
       };

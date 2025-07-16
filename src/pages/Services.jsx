@@ -38,7 +38,7 @@ const Services = () => {
         'Certificado SSL incluido'
       ],
       technologies: ['WordPress', 'React', 'HTML5', 'CSS3', 'JavaScript'],
-      startingPrice: '$195.990'
+      startingPrice: 'Desde $299.990'
     },
     {
       icon: ShoppingCart,
@@ -53,7 +53,7 @@ const Services = () => {
         'Reportes de ventas detallados'
       ],
       technologies: ['WooCommerce', 'Shopify', 'Magento', 'BigCommerce'],
-      startingPrice: '$350.000'
+      startingPrice: 'Desde $599.990'
     },
     {
       icon: Wrench,
@@ -68,7 +68,7 @@ const Services = () => {
         'Reportes mensuales'
       ],
       technologies: ['WordPress', 'Hosting', 'SSL', 'CDN'],
-      startingPrice: '$25.000/mes'
+      startingPrice: 'Desde $49.990/mes'
     },
     {
       icon: TrendingUp,
@@ -83,7 +83,7 @@ const Services = () => {
         'Seguimiento de conversiones'
       ],
       technologies: ['Google Analytics', 'Search Console', 'SEMrush', 'Ahrefs'],
-      startingPrice: '$150.000/mes'
+      startingPrice: 'Desde $199.990'
     }
   ]
 

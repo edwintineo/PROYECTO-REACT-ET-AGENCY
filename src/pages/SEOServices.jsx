@@ -20,7 +20,7 @@ const SEOServices = () => {
         'Optimización de imágenes',
         'Schema markup'
       ],
-      price: 'Desde $299/mes'
+      price: 'Desde $199.990'
     },
     {
       icon: Globe,
@@ -34,7 +34,7 @@ const SEOServices = () => {
         'Gestión de reputación online',
         'Análisis de competencia'
       ],
-      price: 'Desde $499/mes'
+      price: 'Desde $199.990'
     },
     {
       icon: TrendingUp,
@@ -48,7 +48,7 @@ const SEOServices = () => {
         'Robots.txt',
         'Estructura de datos'
       ],
-      price: 'Desde $399/mes'
+      price: 'Desde $199.990'
     },
     {
       icon: BarChart3,
@@ -62,7 +62,7 @@ const SEOServices = () => {
         'Análisis de tráfico',
         'ROI measurement'
       ],
-      price: 'Desde $199/mes'
+      price: 'Desde $199.990'
     }
   ];
 

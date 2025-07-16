@@ -1,28 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { getProjectImageConfig, generateProjectSlug, getRandomGradient } from '../config/imageConfig';
-import { getPortfolioImageWithFallback } from '../utils/imageImports';
+import { getBlogImage } from '../utils/imageImports';
 
-const OptimizedPortfolioImage = ({ 
-  projectId, 
-  projectTitle, 
-  className = "", 
-  fallbackGradient = null,
-  showFallback = true 
+const OptimizedBlogImage = ({ 
+  imageName, 
+  alt, 
+  className = "",
+  fallbackText = "Imagen no disponible"
 }) => {
   const [imageSrc, setImageSrc] = useState(null);
   const [imageError, setImageError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Obtener configuración del proyecto
-  const projectSlug = generateProjectSlug(projectTitle);
-  const gradient = fallbackGradient || getRandomGradient();
-
   useEffect(() => {
     setIsLoading(true);
     setImageError(false);
     
-    // Intentar obtener la imagen usando el sistema de importaciones dinámicas
-    const imageUrl = getPortfolioImageWithFallback(projectTitle, projectId);
+    // Obtener la imagen usando el sistema de importaciones dinámicas
+    const imageUrl = getBlogImage(imageName);
     
     if (imageUrl) {
       setImageSrc(imageUrl);
@@ -30,7 +24,7 @@ const OptimizedPortfolioImage = ({
       setImageError(true);
       setIsLoading(false);
     }
-  }, [projectId, projectTitle]);
+  }, [imageName]);
 
   const handleImageError = () => {
     setImageError(true);
@@ -51,13 +45,10 @@ const OptimizedPortfolioImage = ({
   }
 
   if (imageError || !imageSrc) {
-    if (!showFallback) return null;
-    
     return (
-      <div className={`${className} bg-gradient-to-br ${gradient} flex items-center justify-center`}>
-        <div className="text-white text-center p-4">
-          <div className="text-lg font-bold mb-1">{projectTitle}</div>
-          <div className="text-sm opacity-90">Imagen no disponible</div>
+      <div className={`${className} bg-gray-100 flex items-center justify-center`}>
+        <div className="text-gray-500 text-center p-4">
+          <div className="text-sm">{fallbackText}</div>
         </div>
       </div>
     );
@@ -66,7 +57,7 @@ const OptimizedPortfolioImage = ({
   return (
     <img
       src={imageSrc}
-      alt={projectTitle}
+      alt={alt}
       className={className}
       onError={handleImageError}
       onLoad={handleImageLoad}
@@ -75,4 +66,4 @@ const OptimizedPortfolioImage = ({
   );
 };
 
-export default OptimizedPortfolioImage;
+export default OptimizedBlogImage;

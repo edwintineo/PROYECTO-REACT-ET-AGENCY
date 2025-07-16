@@ -12,6 +12,7 @@ import {
   ExternalLink
 } from 'lucide-react'
 import { Image } from '../components/common'
+import OptimizedBlogImage from '../components/OptimizedBlogImage'
 
 const BlogPost = () => {
   const { slug } = useParams()
@@ -31,12 +32,10 @@ const BlogPost = () => {
       tags: ['Diseño Web', 'Tendencias 2025', 'UX/UI', 'Chile'],
       metaDescription: 'Conoce las 10 tendencias de diseño web más importantes para 2025. Guía completa con ejemplos prácticos para empresas chilenas que buscan modernizar su presencia digital.',
       content: `
-        <Image 
-          src="/images/blog/tendencias-diseno-web-2025.svg" 
+        <OptimizedBlogImage 
+          imageName="tendencias-diseno-web-2025" 
           alt="Tendencias de Diseño Web 2025" 
-          style={{width: '100%', height: '300px', objectFit: 'cover', borderRadius: '8px', marginBottom: '2rem'}} 
-          lazy={true}
-          webp={true}
+          className="w-full h-[300px] object-cover rounded-lg mb-8" 
         />
         
         <h2>¿Por qué es Crucial Mantenerse al Día con las Tendencias de Diseño Web?</h2>
@@ -223,12 +222,10 @@ const BlogPost = () => {
       tags: ['SEO Local', 'Google My Business', 'Chile', 'Posicionamiento'],
       metaDescription: 'Aprende cómo posicionar tu negocio local en Google Chile. Guía completa de SEO local con estrategias probadas para aumentar tu visibilidad online.',
       content: `
-        <Image 
-          src="/images/blog/seo-local-chile.svg" 
+        <OptimizedBlogImage 
+          imageName="seo-local-chile" 
           alt="SEO Local en Chile" 
-          style={{width: '100%', height: '300px', objectFit: 'cover', borderRadius: '8px', marginBottom: '2rem'}} 
-          lazy={true}
-          webp={true}
+          className="w-full h-[300px] object-cover rounded-lg mb-8" 
         />
         
         <h2>¿Qué es el SEO Local y Por Qué es Crucial para tu Negocio en Chile?</h2>
@@ -494,12 +491,10 @@ const BlogPost = () => {
       tags: ['E-commerce', 'Webpay Plus', 'Conversiones', 'Tienda Online'],
       metaDescription: 'Aprende a integrar Webpay Plus en tu e-commerce chileno. Guía completa con mejores prácticas para aumentar conversiones y ventas online.',
       content: `
-        <Image 
-          src="/images/blog/ecommerce-webpay-plus.svg" 
+        <OptimizedBlogImage 
+          imageName="ecommerce-webpay-plus.svg" 
           alt="E-commerce con Webpay Plus" 
-          style={{width: '100%', height: '300px', objectFit: 'cover', borderRadius: '8px', marginBottom: '2rem'}} 
-          lazy={true}
-          webp={true}
+          className="w-full h-[300px] object-cover rounded-lg mb-8"
         />
         
         <h2>El E-commerce en Chile: Un Mercado en Constante Crecimiento</h2>
@@ -814,12 +809,10 @@ const BlogPost = () => {
       tags: ['Marketing Digital', 'Pymes', 'Estrategia', 'Presupuesto'],
       metaDescription: 'Descubre estrategias de marketing digital efectivas para Pymes chilenas. Guía práctica con tácticas de bajo costo y alto impacto para hacer crecer tu negocio.',
       content: `
-        <Image 
-          src="/images/blog/marketing-digital-pymes.svg" 
+        <OptimizedBlogImage 
+          imageName="marketing-digital-pymes.svg" 
           alt="Marketing Digital para Pymes" 
-          style={{width: '100%', height: '300px', objectFit: 'cover', borderRadius: '8px', marginBottom: '2rem'}} 
-          lazy={true}
-          webp={true}
+          className="w-full h-[300px] object-cover rounded-lg mb-8"
         />
         
         <h2>El Desafío del Marketing Digital para Pymes en Chile</h2>
@@ -1200,12 +1193,10 @@ const BlogPost = () => {
       tags: ['Diseño Web', 'Responsive', 'UX/UI', 'Mobile First'],
       metaDescription: 'Guía completa de diseño web responsive. Aprende técnicas avanzadas para crear sitios web que se adapten perfectamente a móviles, tablets y desktop.',
       content: `
-        <Image 
-          src="/images/blog/diseno-responsive.svg" 
+        <OptimizedBlogImage 
+          imageName="diseno-responsive.svg" 
           alt="Diseño Web Responsive" 
-          style={{width: '100%', height: '300px', objectFit: 'cover', borderRadius: '8px', marginBottom: '2rem'}} 
-          lazy={true}
-          webp={true}
+          className="w-full h-[300px] object-cover rounded-lg mb-8"
         />
         
         <h2>La Era Mobile-First: Por Qué el Diseño Responsive es Fundamental</h2>
@@ -1580,12 +1571,10 @@ const BlogPost = () => {
       metaDescription: 'Guía completa sobre automatización de procesos empresariales. Aprende a implementar soluciones tecnológicas que transformen tu negocio y aumenten la productividad.',
       content: `
         <div style="text-align: center; margin: 20px 0;">
-          <Image 
-          src="/images/blog/automatizacion-procesos.svg" 
+          <OptimizedBlogImage 
+          imageName="automatizacion-procesos.svg" 
           alt="Automatización de Procesos Empresariales" 
-          style={{maxWidth: '100%', height: 'auto', borderRadius: '8px'}} 
-          lazy={true}
-          webp={true}
+          className="max-w-full h-auto rounded-lg"
         />
         </div>
         
@@ -1982,12 +1971,10 @@ const BlogPost = () => {
       metaDescription: 'Guía completa de SEO técnico para desarrolladores. Aprende los fundamentos técnicos del SEO que todo desarrollador debe dominar.',
       content: `
         <div style="text-align: center; margin: 20px 0;">
-          <Image 
-          src="/images/blog/seo-tecnico.svg" 
+          <OptimizedBlogImage 
+          imageName="seo-tecnico.svg" 
           alt="SEO Técnico para Desarrolladores" 
-          style={{maxWidth: '100%', height: 'auto', borderRadius: '8px'}} 
-          lazy={true}
-          webp={true}
+          className="max-w-full h-auto rounded-lg"
         />
         </div>
         
@@ -2165,12 +2152,10 @@ const BlogPost = () => {
       metaDescription: 'Aprende técnicas probadas para optimizar el checkout de tu e-commerce, reducir el abandono del carrito y aumentar las conversiones.',
       content: `
         <div style="text-align: center; margin: 20px 0;">
-          <Image 
-          src="/images/blog/conversiones-ecommerce.svg" 
+          <OptimizedBlogImage 
+          imageName="conversiones-ecommerce.svg" 
           alt="Optimización de Conversiones E-commerce" 
-          style={{maxWidth: '100%', height: 'auto', borderRadius: '8px'}} 
-          lazy={true}
-          webp={true}
+          className="max-w-full h-auto rounded-lg"
         />
         </div>
         
