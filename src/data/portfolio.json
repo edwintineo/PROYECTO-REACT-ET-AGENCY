@@ -131,7 +131,7 @@
       "title": "Pallets Ray - Página Web",
       "category": "Sitio Web",
       "description": "Sitio web para empresa especializada en fabricación y venta de pallets.",
-      "image": "/images/portfolio/pallets-ray.webp",
+      "image": "/images/portfolio/pallets ray.webp",
       "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
       "features": [
         "Catálogo de productos",
@@ -275,7 +275,7 @@
       "title": "Saldias Instalaciones Sanitarias - Página Web",
       "category": "Sitio Web",
       "description": "Sitio web para empresa de instalaciones sanitarias y plomería.",
-      "image": "/images/portfolio/saldias-instalaciones.webp",
+      "image": "/images/portfolio/saldias-instalaciones-sanitarias.webp",
       "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
       "features": [
         "Servicios de plomería",
@@ -383,7 +383,7 @@
       "title": "Plegados Y Metales - Página Web",
       "category": "Sitio Web",
       "description": "Sitio web para empresa de plegados y trabajos en metal.",
-      "image": "/images/portfolio/plegados-metales.webp",
+      "image": "/images/portfolio/plegados-y-metales.webp",
       "technologies": ["WordPress", "PHP", "MySQL", "JavaScript", "CSS"],
       "features": [
         "Servicios de plegado",
@@ -437,7 +437,7 @@
       "title": "Almacen de Hilados - Tienda Online",
       "category": "E-commerce",
       "description": "Tienda online especializada en hilados y materiales de costura.",
-      "image": "/images/portfolio/almacen-hilados.webp",
+      "image": "/images/portfolio/almazen-de-hilados.webp",
       "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
       "features": [
         "Catálogo de hilados",
@@ -455,7 +455,7 @@
       "title": "Accesorios de Bebe - Tienda Online",
       "category": "E-commerce",
       "description": "E-commerce especializado en productos y accesorios para bebés.",
-      "image": "/images/portfolio/accesorios-bebe.webp",
+      "image": "/images/portfolio/accesorios-de-bebe.webp",
       "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
       "features": [
         "Productos para bebés",
@@ -491,7 +491,7 @@
       "title": "Berkese - Tienda Online",
       "category": "E-commerce",
       "description": "Especialistas en la aplicación de recubrimientos protectores.",
-      "image": "/images/portfolio/berkese.webp",
+      "image": "/images/portfolio/berkese-nueva.webp",
       "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL", "JavaScript", "CSS"],
       "features": [
         "Productos de belleza",

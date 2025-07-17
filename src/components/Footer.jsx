@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="mb-8">
             <Link to="/" className="flex items-center justify-center mb-4">
               <Image 
-                src="/src/assets/laptop-footer..webp"
+                src="/assets/laptop-footer.webp"
                 alt="ET Agency - Agencia de Marketing Digital" 
                 className="h-28 w-auto mx-auto"
                 lazy={false}
