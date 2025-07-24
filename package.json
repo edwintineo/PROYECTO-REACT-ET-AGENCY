@@ -7,8 +7,6 @@
     "dev": "vite",
     "build": "vite build",
     "build:prod": "cross-env NODE_ENV=production vite build",
-    "start": "node server.js",
-    "serve": "npm run build:prod && npm run start",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "analyze": "npm run build:prod && npx vite-bundle-analyzer dist/stats.html",

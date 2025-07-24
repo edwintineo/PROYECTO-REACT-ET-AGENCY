@@ -268,6 +268,10 @@ export default defineConfig(({ command, mode }) => {
 
   return {
     plugins,
+    // Configuración de resolución de módulos
+    resolve: {
+      extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
+    },
     // Configuración de assets para CDN
     assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.webp', '**/*.avif'],
     
