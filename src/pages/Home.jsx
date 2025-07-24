@@ -80,7 +80,7 @@ const Home = () => {
               viewport={{ once: true }}
               className="text-xl text-muted max-w-3xl mx-auto leading-relaxed"
             >
-              +120 PyMEs chilenas han aumentado sus ventas online con nuestros servicios de marketing digital y desarrollo web. 
+              +170 PyMEs chilenas han aumentado sus ventas online con nuestros servicios de marketing digital y desarrollo web. 
               Conoce sus casos de éxito.
             </motion.p>
           </motion.div>
@@ -183,7 +183,7 @@ const Home = () => {
               ¿Listo para aumentar tus ventas online?
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Únete a +120 PyMEs chilenas que aumentaron sus ventas con nuestras soluciones digitales. 
+              Únete a +170 PyMEs chilenas que aumentaron sus ventas con nuestras soluciones digitales. 
               ¡Cotización gratuita en 24 horas!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

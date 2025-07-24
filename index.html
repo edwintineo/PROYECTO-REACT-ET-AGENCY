@@ -4,6 +4,25 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     
+    <!-- Force Light Mode Script - Execute immediately -->
+    <script>
+      // Force light mode immediately before any rendering
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      
+      // Prevent any dark mode from being applied
+      const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+            if (document.documentElement.classList.contains('dark')) {
+              document.documentElement.classList.remove('dark');
+            }
+          }
+        });
+      });
+      observer.observe(document.documentElement, { attributes: true });
+    </script>
+    
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json" />
     

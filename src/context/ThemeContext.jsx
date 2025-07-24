@@ -11,30 +11,32 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    // Check localStorage first
-    const saved = localStorage.getItem('theme');
-    if (saved) {
-      return saved === 'dark';
-    }
-    // Default to light mode instead of system preference
-    return false;
-  });
+  // Always force light mode - completely ignore any previous settings
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Update localStorage when theme changes
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    // Force light mode immediately on mount
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
     
-    // Update document class
+    // Ensure the state is always false (light mode)
     if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
+      setIsDarkMode(false);
     }
+  }, []);
+
+  useEffect(() => {
+    // Always keep in light mode regardless of state changes
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
   }, [isDarkMode]);
 
   const toggleTheme = () => {
-    setIsDarkMode(prev => !prev);
+    // Disabled - always stay in light mode
+    // setIsDarkMode(prev => !prev);
+    setIsDarkMode(false);
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
   };
 
   const value = {

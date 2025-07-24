@@ -68,7 +68,7 @@ const HeroSection = ({ hero }) => {
             className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">960+</div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">731+</div>
               <div className="text-gray-300 text-sm">Proyectos completados</div>
             </div>
             <div className="text-center">

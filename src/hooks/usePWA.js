@@ -146,11 +146,12 @@ export const usePWA = () => {
     };
 
     if (swRegistration) {
-      // Usar Service Worker para notificaciones
+      // Usar Service Worker para notificaciones (soporta acciones)
       swRegistration.showNotification(title, defaultOptions);
     } else {
-      // Fallback a notificación directa
-      new Notification(title, defaultOptions);
+      // Fallback a notificación directa (sin acciones)
+      const { actions, ...fallbackOptions } = defaultOptions;
+      new Notification(title, fallbackOptions);
     }
   }, [notificationPermission, swRegistration]);
 

@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Agencia de Marketing Digital #1 en Chile",
-    "subtitle": "Aumenta tus ventas con sitios web profesionales, tiendas online y estrategias SEO. Especialistas en PyMEs chilenas con +960 proyectos exitosos.",
+    "subtitle": "Aumenta tus ventas con sitios web profesionales, tiendas online y estrategias SEO. Especialistas en PyMEs chilenas con +731 proyectos exitosos.",
     "ctaText": "Cotizar mi proyecto gratis",
     "ctaLink": "/contacto",
     "backgroundImage": "/images/hero-bg.jpg"
@@ -61,10 +61,10 @@
     }
   ],
   "stats": {
-    "projectsCompleted": 960,
-    "happyClients": 500,
+    "projectsCompleted": 731,
+    "happyClients": 170,
     "yearsExperience": 15,
-    "teamMembers": 8
+    "teamMembers": 6
   },
   "testimonials": [
     {

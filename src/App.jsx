@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import { ThemeProvider } from './context/ThemeContext'
+import { ThemeProvider } from './context/themecontext'
 import { CDNProvider, CDNLoadingIndicator } from './components/CDNProvider'
 import PWAInstallPrompt from './components/PWAInstallPrompt'
 
@@ -59,7 +59,7 @@ function App() {
         <Router>
           <CDNLoadingIndicator />
           <ScrollToTop />
-          <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+          <div className="min-h-screen bg-white transition-colors duration-300">
             <Header />
             <main className="pt-16 lg:pt-20">
               <AnimatedRoutes />

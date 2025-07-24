@@ -273,7 +273,7 @@ const Contact = () => {
               {
                 icon: Star,
                 title: 'Experiencia Comprobada',
-                description: 'Más de 100 proyectos exitosos y clientes satisfechos en Chile.',
+                description: 'Más de 731 proyectos exitosos y clientes satisfechos en Chile.',
                 color: 'bg-purple-100 text-purple-600'
               }
             ].map((feature, index) => {

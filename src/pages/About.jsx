@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet'; // Importar Helmet
 import { motion } from 'framer-motion';
 import { Users, Target, Award, Heart, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { AvatarImage } from '../components/common';
+import { AvatarImage, Image } from '../components/common';
 
 const About = () => {
   const stats = [
-    { number: '5+', label: 'Años de Experiencia' },
-    { number: '200+', label: 'Proyectos Completados' },
-    { number: '150+', label: 'Clientes Satisfechos' },
+    { number: '15+', label: 'Años de Experiencia' },
+    { number: '731+', label: 'Proyectos Completados' },
+    { number: '170+', label: 'Clientes Satisfechos' },
     { number: '24/7', label: 'Soporte Técnico' }
   ];
 
@@ -38,30 +38,30 @@ const About = () => {
 
   const team = [
     {
-      name: 'Carlos Mendoza',
+      name: 'Edwin Tineo',
       role: 'CEO & Fundador',
-      image: '/images/team/carlos.jpg',
-      description: 'Experto en estrategias digitales con más de 8 años de experiencia.'
+      image: '/images/team/edwin.png',
+      description: 'Apasionado por la ciencia y la tecnología con más de 15 años de experiencia.'
     },
     {
-      name: 'Ana García',
-      role: 'Directora de Marketing',
-      image: '/images/team/ana.jpg',
-      description: 'Especialista en marketing digital y posicionamiento SEO.'
+      name: 'Aura Silva',
+      role: 'Diseñadora Gráfica / UX',
+      image: '/images/team/aura.png',
+      description: 'Creativa al 101%, especialista en diseño gráfico y experiencia de usuario.'
     },
     {
-      name: 'Luis Rodríguez',
-      role: 'Desarrollador Senior',
-      image: '/images/team/luis.jpg',
-      description: 'Full-stack developer con expertise en React y Node.js.'
+      name: 'Isnaldo Carvajal',
+      role: 'Diseñador / Programador',
+      image: '/images/team/isnaldo.png',
+      description: 'Amante de la literatura, la poesía, el arte, la música y la tecnología.'
     }
   ];
 
   const achievements = [
-    'Certificación Google Partner',
-    'Reconocimiento como Mejor Agencia Digital 2023',
-    'Más de 1M de usuarios impactados',
-    'Presencia en 5 países de Latinoamérica'
+    'Certificados en desarrollo web moderno',
+    'Tiempo de respuesta promedio: 2 horas',
+    'Proyectos entregados a tiempo: 98%',
+    'Garantía de satisfacción del cliente'
   ];
 
   return (
@@ -223,11 +223,14 @@ const About = () => {
                 className="card-bg rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
                 <div className="h-64 overflow-hidden">
-                  <AvatarImage
+                  <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover"
-                    fallback={<Users className="h-20 w-20 text-white" />}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    onError={(e) => {
+                      console.log('Error loading image:', member.image);
+                      e.target.style.display = 'none';
+                    }}
                   />
                 </div>
                 <div className="p-6">

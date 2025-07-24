@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChevronDown, Sun, Moon } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useTheme } from '../context/ThemeContext'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const location = useLocation()
-  const { isDarkMode, toggleTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,8 +41,8 @@ const Header = () => {
       animate={{ y: 0 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg' 
-          : 'bg-white/10 dark:bg-gray-900/10 backdrop-blur-sm'
+          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+          : 'bg-white/10 backdrop-blur-sm'
       }`}
     >
       <div className="container-custom">
@@ -55,7 +53,7 @@ const Header = () => {
               isScrolled ? 'text-xl' : 'text-2xl'
             }`}>
               <span className="text-blue-600">ET</span>
-              <span className="text-gray-800 dark:text-white ml-1">AGENCY</span>
+              <span className="text-gray-800 ml-1">AGENCY</span>
             </span>
           </Link>
 
@@ -74,10 +72,10 @@ const Header = () => {
                         location.pathname === item.href || location.pathname.includes('seo-servicios')
                           ? isScrolled
                             ? 'text-primary-600'
-                            : isDarkMode ? 'text-white border-b-2 border-white' : 'text-primary-600 border-b-2 border-primary-600'
+                            : 'text-primary-600 border-b-2 border-primary-600'
                           : isScrolled
-                         ? 'text-gray-700 dark:text-gray-300 hover:text-primary-600'
-                         : isDarkMode ? 'text-white hover:text-primary-200' : (location.pathname === '/' ? 'text-white hover:text-primary-200' : 'text-gray-900 hover:text-primary-600')
+                         ? 'text-gray-700 hover:text-primary-600'
+                         : (location.pathname === '/' ? 'text-white hover:text-primary-200' : 'text-gray-900 hover:text-primary-600')
                       }`}
                     >
                       <span>{item.name}</span>
@@ -108,17 +106,17 @@ const Header = () => {
                   </div>
                 ) : (
                   <Link
-                    to={item.href}
-                    className={`font-medium transition-colors duration-200 ${
-                      location.pathname === item.href
-                        ? isScrolled
-                          ? 'text-primary-600'
-                          : isDarkMode ? 'text-white border-b-2 border-white' : 'text-primary-600 border-b-2 border-primary-600'
-                        : isScrolled
-                         ? 'text-gray-700 dark:text-gray-300 hover:text-primary-600'
-                         : isDarkMode ? 'text-white hover:text-primary-200' : (location.pathname === '/' ? 'text-white hover:text-primary-200' : 'text-gray-900 hover:text-primary-600')
-                    }`}
-                  >
+                      to={item.href}
+                      className={`font-medium transition-colors duration-200 ${
+                        location.pathname === item.href
+                          ? isScrolled
+                            ? 'text-primary-600'
+                            : 'text-primary-600 border-b-2 border-primary-600'
+                          : isScrolled
+                          ? 'text-gray-700 hover:text-primary-600'
+                          : (location.pathname === '/' ? 'text-white hover:text-primary-200' : 'text-gray-900 hover:text-primary-600')
+                      }`}
+                    >
                     {item.name}
                   </Link>
                 )}
@@ -126,19 +124,8 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Theme Toggle & CTA Button */}
+          {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button
-              onClick={toggleTheme}
-              className={`p-2 rounded-lg transition-colors duration-200 ${
-                isScrolled 
-                  ? 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800' 
-                  : 'text-gray-900 dark:text-white hover:bg-white/10 dark:hover:bg-gray-800/50'
-              }`}
-              aria-label="Toggle theme"
-            >
-              {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
             <Link
               to="/contacto"
               className={`px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ${
@@ -154,22 +141,13 @@ const Header = () => {
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center space-x-2">
             <button
-              onClick={toggleTheme}
-              className={`p-2 rounded-lg transition-colors duration-200 ${
-                isScrolled 
-                  ? 'text-gray-700 dark:text-gray-300' 
-                  : 'text-gray-900 dark:text-white'
-              }`}
-              aria-label="Toggle theme"
-            >
-              {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2 rounded-md ${
-                isScrolled ? 'text-gray-700 dark:text-gray-300' : 'text-gray-900 dark:text-white'
-              }`}
-            >
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className={`p-2 rounded-lg transition-colors duration-200 ${
+              isScrolled 
+                ? 'text-gray-700 hover:bg-gray-100' 
+                : (location.pathname === '/' ? 'text-white hover:bg-white/10' : 'text-gray-900 hover:bg-gray-100')
+            }`}
+          >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -184,7 +162,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700"
+            className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-200"
           >
             <div className="container-custom py-4">
               <nav className="flex flex-col space-y-4">
@@ -209,7 +187,7 @@ const Header = () => {
                               key={dropdownItem.name}
                               to={dropdownItem.href}
                               onClick={() => setIsMenuOpen(false)}
-                              className="block py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 transition-colors"
+                              className="block py-1 text-sm text-gray-600 hover:text-primary-600 transition-colors"
                             >
                               {dropdownItem.name}
                             </Link>
@@ -223,7 +201,7 @@ const Header = () => {
                         className={`font-medium py-2 transition-colors duration-200 block ${
                           location.pathname === item.href
                             ? 'text-primary-600 border-l-4 border-primary-600 pl-4'
-                            : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 pl-4'
+                            : 'text-gray-700 hover:text-primary-600 pl-4'
                         }`}
                       >
                         {item.name}

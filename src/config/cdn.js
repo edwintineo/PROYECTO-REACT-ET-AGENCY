@@ -61,15 +61,15 @@ export const generateCDNUrl = (assetPath, options = {}) => {
     transforms = []
   } = options;
 
-  // Para imágenes usando Cloudinary
+  // Para imágenes, usar rutas locales en lugar de Cloudinary
   if (type === 'image') {
-    let transformString = `f_${format},q_${quality}`;
+    // Si la ruta ya es absoluta o comienza con /, usarla tal como está
+    if (assetPath.startsWith('/') || assetPath.startsWith('http')) {
+      return assetPath;
+    }
     
-    if (width) transformString += `,w_${width}`;
-    if (height) transformString += `,h_${height}`;
-    if (transforms.length > 0) transformString += `,${transforms.join(',')}`;
-    
-    return `${CDN_URLS.images.cloudinary}/${transformString}/${assetPath}`;
+    // Para rutas relativas, agregar el prefijo /
+    return `/${assetPath}`;
   }
   
   // Para otros assets usando jsDelivr

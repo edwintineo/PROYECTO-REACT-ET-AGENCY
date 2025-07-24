@@ -106,7 +106,7 @@ const Portfolio = () => {
               <div className="flex flex-wrap justify-center gap-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
                   <div className="text-2xl font-bold">{projects.length}</div>
-                  <div className="text-sm">Proyectos Completados</div>
+                  <div className="text-sm">Proyectos Destacados</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
                   <div className="text-2xl font-bold">95%</div>
