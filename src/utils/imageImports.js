@@ -4,13 +4,13 @@
  */
 
 // Importar todas las imágenes del portfolio
-const portfolioImages = import.meta.glob('/public/images/portfolio/*.{png,jpg,jpeg,svg,webp}', { 
+const portfolioImages = import.meta.glob('/images/portfolio/*.{png,jpg,jpeg,svg,webp}', {
   eager: true,
   as: 'url'
 });
 
 // Importar todas las imágenes del blog
-const blogImages = import.meta.glob('/public/images/blog/*.{png,jpg,jpeg,svg,webp}', { 
+const blogImages = import.meta.glob('/images/blog/*.{png,jpg,jpeg,svg,webp}', {
   eager: true,
   as: 'url'
 });

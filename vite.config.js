@@ -280,7 +280,7 @@ export default defineConfig(({ command, mode }) => {
     assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.webp', '**/*.avif'],
     
   server: {
-    port: 8080,
+    port: 8087,
     open: true,
     host: true, // Permite acceso desde la red local
     // Headers para desarrollo con CDN
