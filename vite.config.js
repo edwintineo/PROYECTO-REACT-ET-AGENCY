@@ -4,6 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { writeFileSync } from 'fs'
 import { generateSitemap } from './src/utils/sitemapGenerator.js'
 import viteCompression from 'vite-plugin-compression'
+import path from 'path' // Importar path
 // import { imageOptimizationPlugin, imageManifestPlugin } from './vite-plugins/imageOptimization.js'
 
 // Plugin para optimización de CDN
@@ -270,6 +271,9 @@ export default defineConfig(({ command, mode }) => {
     plugins,
     // Configuración de resolución de módulos
     resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './src'), // Añadir alias para 'src'
+      },
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
     },
     // Configuración de assets para CDN
