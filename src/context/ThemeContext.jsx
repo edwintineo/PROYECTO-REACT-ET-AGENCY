@@ -10,7 +10,7 @@ export const useTheme = () => {
   return context;
 };
 
-export const ThemeProvider = ({ children }) => {
+const ThemeProvider = ({ children }) => {
   // Always force light mode - completely ignore any previous settings
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -52,4 +52,4 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-export default ThemeContext;
+export default ThemeProvider;
