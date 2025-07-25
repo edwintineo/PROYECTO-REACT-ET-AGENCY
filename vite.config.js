@@ -269,6 +269,7 @@ export default defineConfig(({ command, mode }) => {
 
   return {
     plugins,
+    base: './', // Añadir base para rutas relativas en producción
     // Configuración de resolución de módulos
     resolve: {
       alias: {
