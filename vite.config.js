@@ -281,7 +281,7 @@ export default defineConfig(({ command, mode }) => {
     assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.webp', '**/*.avif'],
     
   server: {
-    port: 8539,
+    port: 8604,
     open: true,
     host: true, // Permite acceso desde la red local
     // Headers para desarrollo con CDN
@@ -294,7 +294,7 @@ export default defineConfig(({ command, mode }) => {
     outDir: 'dist',
     sourcemap: true,
     // Configuración de assets para CDN
-    assetsDir: 'assets',
+    assetsDir: 'assets', // Revertir a 'assets' para que los assets se coloquen en dist/assets
     assetsInlineLimit: 4096, // 4kb - archivos más pequeños se incluyen inline
     
     // Optimizaciones para SEO y CDN
