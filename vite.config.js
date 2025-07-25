@@ -269,7 +269,7 @@ export default defineConfig(({ command, mode }) => {
 
   return {
     plugins,
-    base: './', // Añadir base para rutas relativas en producción
+    base: '/', // Asegurar que las rutas de los assets sean absolutas desde la raíz
     // Configuración de resolución de módulos
     resolve: {
       alias: {
