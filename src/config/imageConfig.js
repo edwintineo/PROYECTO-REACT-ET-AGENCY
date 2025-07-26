@@ -36,7 +36,7 @@ export const PROJECT_IMAGE_CONFIG = {
 };
 
 // Configuración global de imágenes
-import placeholderImage from '@/assets/images/placeholder.svg';
+import placeholderImage from '../assets/images/placeholder.svg';
 
 export const GLOBAL_IMAGE_CONFIG = {
   supportedFormats: ['webp', 'svg', 'jpg', 'png'],

@@ -246,7 +246,7 @@ export const FORM_OPTIONS = {
 };
 
 // SEO Defaults
-import ogImage from '../assets/images/og-image.jpg';
+import ogImage from '../assets/images/og-image.svg';
 
 // SEO Defaults
 export const SEO_DEFAULTS = {

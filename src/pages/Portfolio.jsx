@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet'
+import React, { useState, useMemo } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import {
   ExternalLink,
@@ -17,6 +17,7 @@ import {
 import OptimizedPortfolioImage from '../components/OptimizedPortfolioImage'
 import { Image } from '../components/common'
 import portfolioData from '../data/portfolio.json'
+import { getImageFromPath } from '../config/portfolioImages'
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('todos')
@@ -171,7 +172,7 @@ const Portfolio = () => {
                     {/* Project Image */}
                     <div className="relative h-48 overflow-hidden">
                       <img
-                        src={project.image}
+                        src={getImageFromPath(project.image) || project.image}
                         alt={project.title}
                         className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                         loading="lazy"

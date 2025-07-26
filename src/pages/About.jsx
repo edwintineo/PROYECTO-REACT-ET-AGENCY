@@ -1,9 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet'; // Importar Helmet
+import { Helmet } from 'react-helmet-async'; // Importar Helmet
 import { motion } from 'framer-motion';
 import { Users, Target, Award, Heart, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AvatarImage, Image } from '../components/common';
+import { getTeamImageFromPath } from '../config/teamImages';
 
 const About = () => {
   const stats = [
@@ -224,7 +225,7 @@ const About = () => {
               >
                 <div className="h-64 overflow-hidden">
                   <img
-                    src={member.image}
+                    src={getTeamImageFromPath(member.image) || member.image}
                     alt={member.name}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     onError={(e) => {

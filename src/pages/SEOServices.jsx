@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet'; // Importar Helmet
+import { Helmet } from 'react-helmet-async'; // Importar Helmet
 import { motion } from 'framer-motion';
 import { Search, TrendingUp, Target, BarChart3, Globe, Users, CheckCircle, ArrowRight, Star, Award, Zap, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';

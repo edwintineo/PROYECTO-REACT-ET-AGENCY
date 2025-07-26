@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet'; // Importar Helmet
+import { Helmet } from 'react-helmet-async'; // Importar Helmet
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Search, MessageCircle, Phone, Mail, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';

@@ -3,7 +3,7 @@
  * Centralized configuration for the entire application
  */
 
-import ogImage from '../assets/images/og-image.jpg';
+import ogImage from '../assets/images/og-image.svg';
 
 // Environment variables with fallbacks
 const config = {

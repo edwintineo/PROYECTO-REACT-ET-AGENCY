@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
+import { HelmetProvider } from 'react-helmet-async'
 import ThemeProvider from './themecontext.jsx'
 import { CDNProvider, CDNLoadingIndicator } from './components/CDNProvider'
 import PWAInstallPrompt from './components/PWAInstallPrompt'
@@ -46,33 +47,35 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <CDNProvider config={{
-      enablePreload: true,
-      enableServiceWorker: true,
-      criticalImages: [
-        'logo-et-agency.svg',
-        'hero-background.jpg',
-        'et-agency-original.svg'
-      ]
-    }}>
-      <ThemeProvider>
-        <Router>
-          <CDNLoadingIndicator />
-          <ScrollToTop />
-          <div className="min-h-screen bg-white transition-colors duration-300">
-            <Header />
-            <main className="pt-16 lg:pt-20">
-              <AnimatedRoutes />
-            </main>
-            <Footer />
-            <ChatBot />
-            <PWAInstallPrompt />
-          </div>
-          
+    <HelmetProvider>
+      <CDNProvider config={{
+        enablePreload: true,
+        enableServiceWorker: true,
+        criticalImages: [
+          'logo-et-agency.svg',
+          'hero-background.jpg',
+          'et-agency-original.svg'
+        ]
+      }}>
+        <ThemeProvider>
+          <Router>
+            <CDNLoadingIndicator />
+            <ScrollToTop />
+            <div className="min-h-screen bg-white transition-colors duration-300">
+              <Header />
+              <main className="pt-16 lg:pt-20">
+                <AnimatedRoutes />
+              </main>
+              <Footer />
+              <ChatBot />
+              <PWAInstallPrompt />
+            </div>
+            
 
-        </Router>
-      </ThemeProvider>
-    </CDNProvider>
+          </Router>
+        </ThemeProvider>
+      </CDNProvider>
+    </HelmetProvider>
   )
 }
 

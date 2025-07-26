@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter, Palette } from 'lucide-react'
+import logoEtAgency from '../assets/logo-et-agency.svg'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -36,7 +37,7 @@ const Footer = () => {
           <div className="mb-8">
             <Link to="/" className="flex items-center justify-center mb-4">
               <img 
-                src="/logo-et-agency.svg"
+                src={logoEtAgency}
                 alt="ET Agency - Agencia de Marketing Digital" 
                 className="h-28 w-auto mx-auto"
                 loading="eager"

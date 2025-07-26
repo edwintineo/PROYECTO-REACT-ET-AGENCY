@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, ogImage = '/logo-et-agency.svg', ogUrl }) => {
   const fullTitle = `${title} | ET Agency`;

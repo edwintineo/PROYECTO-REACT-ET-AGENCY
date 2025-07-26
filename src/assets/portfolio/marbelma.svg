@@ -1,0 +1,23 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg2)" />
+  
+  <!-- Website layout -->
+  <rect x="50" y="50" width="300" height="200" rx="10" fill="white" opacity="0.9" />
+  <rect x="80" y="80" width="240" height="25" rx="5" fill="#E5E7EB" />
+  <rect x="80" y="120" width="60" height="60" rx="5" fill="#F3F4F6" />
+  <rect x="160" y="120" width="60" height="60" rx="5" fill="#F3F4F6" />
+  <rect x="240" y="120" width="60" height="60" rx="5" fill="#F3F4F6" />
+  <rect x="80" y="200" width="240" height="15" rx="3" fill="#E5E7EB" />
+  <rect x="80" y="225" width="180" height="10" rx="3" fill="#D1D5DB" />
+  
+  <!-- Title -->
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Marbelma</text>
+</svg>

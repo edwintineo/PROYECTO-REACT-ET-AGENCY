@@ -15,6 +15,7 @@ import {
   BarChart3
 } from 'lucide-react'
 import { Image } from '../components/common'
+import { getBlogImageFromPath } from '../config/blogImages'
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('todos')
@@ -263,7 +264,7 @@ const Blog = () => {
                   >
                     <div className="relative h-48 overflow-hidden">
                       <Image 
-                        src={post.image} 
+                        src={getBlogImageFromPath(post.image)} 
                         alt={post.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         lazy={true}
@@ -369,7 +370,7 @@ const Blog = () => {
                     >
                       <div className="relative h-40 overflow-hidden">
                         <Image 
-                          src={post.image} 
+                          src={getBlogImageFromPath(post.image)} 
                           alt={post.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           lazy={true}
