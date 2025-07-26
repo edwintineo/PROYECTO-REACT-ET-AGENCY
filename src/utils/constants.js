@@ -246,12 +246,15 @@ export const FORM_OPTIONS = {
 };
 
 // SEO Defaults
+import ogImage from '../assets/images/og-image.jpg';
+
+// SEO Defaults
 export const SEO_DEFAULTS = {
   title: 'ET Agency - Agencia de Marketing Digital y SEO en Chile',
   description: 'Agencia especializada en posicionamiento SEO, desarrollo web y marketing digital. Aumenta tu visibilidad online y haz crecer tu negocio con nuestras estrategias digitales.',
   keywords: 'agencia seo chile, marketing digital, desarrollo web, posicionamiento web, agencia digital santiago',
   author: 'ET Agency',
-  image: '/images/og-image.jpg',
+  image: ogImage,
   url: 'https://www.etagency.cl',
   type: 'website',
   locale: 'es_CL',

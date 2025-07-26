@@ -1,3 +1,8 @@
+import seoTrendsImage from '../assets/images/blog/seo-trends-2024.jpg';
+import reactDevelopmentImage from '../assets/images/blog/react-development.jpg';
+import mariaGonzalezImage from '../assets/images/testimonials/maria-gonzalez.jpg';
+import carlosMendozaImage from '../assets/images/testimonials/carlos-mendoza.jpg';
+import anaRuizImage from '../assets/images/testimonials/ana-ruiz.jpg';
 /**
  * DataService - Centralized data management service
  * Handles API calls, data caching, and data transformation
@@ -111,8 +116,16 @@ class DataService {
             content: 'Contenido completo del artículo...',
             author: 'ET Agency',
             date: '2024-01-15',
+import seoTrendsImage from '../assets/images/blog/seo-trends-2024.jpg';
+import reactDevelopmentImage from '../assets/images/blog/react-development.jpg';
+import mariaGonzalezImage from '../assets/images/testimonials/maria-gonzalez.jpg';
+import carlosMendozaImage from '../assets/images/testimonials/carlos-mendoza.jpg';
+import anaRuizImage from '../assets/images/testimonials/ana-ruiz.jpg';
+
+// ... (resto del código)
+
             category: 'SEO',
-            image: '/images/blog/seo-trends-2024.jpg',
+            image: seoTrendsImage,
             tags: ['SEO', 'Marketing Digital', 'Tendencias']
           },
           {
@@ -123,7 +136,7 @@ class DataService {
             author: 'ET Agency',
             date: '2024-01-10',
             category: 'Desarrollo Web',
-            image: '/images/blog/react-development.jpg',
+            image: reactDevelopmentImage,
             tags: ['React', 'JavaScript', 'Desarrollo Web']
           }
         ],
@@ -251,27 +264,25 @@ class DataService {
             role: 'Propietaria',
             content: 'ET Agency transformó completamente nuestra presencia online. Las ventas aumentaron un 150% en 6 meses.',
             rating: 5,
-            image: '/images/testimonials/maria-gonzalez.jpg',
+            image: mariaGonzalezImage,
             service: 'SEO + Desarrollo Web'
           },
           {
             id: 2,
             name: 'Carlos Mendoza',
-            company: 'TechStart',
-            role: 'CEO',
-            content: 'Profesionales excepcionales. Su estrategia SEO nos posicionó en el top 3 de Google para nuestras palabras clave principales.',
+            company: 'Ferretería El Martillo',
+            quote: 'El equipo de ET Agency es increíble. Nos ayudaron a digitalizar nuestro negocio familiar y ahora llegamos a todo Chile.',
             rating: 5,
-            image: '/images/testimonials/carlos-mendoza.jpg',
+            image: carlosMendozaImage,
             service: 'Posicionamiento SEO'
           },
           {
             id: 3,
-            name: 'Ana Ruiz',
-            company: 'Clínica Dental Sonrisa',
-            role: 'Directora',
-            content: 'El nuevo sitio web es increíble. Nuestros pacientes constantemente elogian la facilidad de uso y el diseño.',
+            name: 'Ana Rodríguez',
+            company: 'Pastelería Dulce Hogar',
+            quote: 'Gracias a ET Agency ahora tenemos una tienda online hermosa y funcional. El proceso fue súper fácil y profesional.',
             rating: 5,
-            image: '/images/testimonials/ana-ruiz.jpg',
+            image: anaRuizImage,
             service: 'Desarrollo Web'
           }
         ]

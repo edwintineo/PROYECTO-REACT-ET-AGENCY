@@ -3,16 +3,18 @@
  * Centralized configuration for the entire application
  */
 
+import ogImage from '../assets/images/og-image.jpg';
+
 // Environment variables with fallbacks
 const config = {
-  // App Information
-  app: {
-    name: 'ET Agency',
-    version: '1.0.0',
-    description: 'Agencia de Marketing Digital y Desarrollo Web',
-    url: process.env.REACT_APP_URL || 'https://etagency.cl',
-    environment: process.env.NODE_ENV || 'development',
-  },
+// App Information
+app: {
+  name: 'ET Agency',
+  version: '1.0.0',
+  description: 'Agencia de Marketing Digital y Desarrollo Web',
+  url: process.env.REACT_APP_URL || 'https://etagency.cl',
+  environment: process.env.NODE_ENV || 'development',
+},
 
   // API Configuration
   api: {
@@ -72,7 +74,7 @@ const config = {
     titleTemplate: '%s | ET Agency',
     defaultDescription: 'Agencia especializada en marketing digital, desarrollo web y posicionamiento SEO en Chile.',
     defaultKeywords: 'marketing digital, desarrollo web, SEO, agencia digital, Chile',
-    defaultImage: '/images/og-image.jpg',
+    defaultImage: ogImage,
     twitterHandle: '@etagency',
     facebookAppId: process.env.REACT_APP_FACEBOOK_APP_ID,
   },
