@@ -1,23 +1,25 @@
-import React, { useState, useMemo } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { motion } from 'framer-motion'
-import {
-  ExternalLink,
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  ExternalLink, 
+  Github, 
+  Calendar, 
+  Tag, 
   Filter,
-  Globe,
+  Search,
+  ArrowRight,
+  Eye,
+  Star,
+  TrendingUp,
   ShoppingCart,
+  Globe,
   Briefcase,
-  Heart,
-  Coffee,
-  Car,
   Home,
-  Utensils,
   MessageCircle
-} from 'lucide-react'
-import OptimizedPortfolioImage from '../components/OptimizedPortfolioImage'
-import { Image } from '../components/common'
-import portfolioData from '../data/portfolio.json'
-import { getImageFromPath } from '../config/portfolioImages'
+} from 'lucide-react';
+import portfolioData from '../data/portfolio.json';
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('todos')
@@ -172,7 +174,7 @@ const Portfolio = () => {
                     {/* Project Image */}
                     <div className="relative h-48 overflow-hidden">
                       <img
-                        src={getImageFromPath(project.image) || project.image}
+                        src={project.image}
                         alt={project.title}
                         className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                         loading="lazy"

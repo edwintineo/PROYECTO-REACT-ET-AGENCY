@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter, Palette } from 'lucide-react'
 import logoEtAgency from '../assets/logo-et-agency.svg'
+import laptopFooter from '../assets/laptop-footer.webp'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -35,11 +36,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="mb-8">
-            <Link to="/" className="flex items-center justify-center mb-4">
+            <Link to="/" className="flex items-center mb-4">
               <img 
                 src={logoEtAgency}
                 alt="ET Agency - Agencia de Marketing Digital" 
-                className="h-28 w-auto mx-auto"
+                className="h-28 w-auto"
                 loading="eager"
               />
             </Link>
@@ -92,7 +93,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     to={item.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                    className="text-gray-300 dark:text-gray-400 hover:text-white transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
@@ -104,6 +105,14 @@ const Footer = () => {
           {/* Newsletter */}
           <div>
             <h3 className="font-semibold text-lg mb-6">Newsletter</h3>
+            <div className="mb-4">
+              <img 
+                src={laptopFooter}
+                alt="Desarrollo web profesional" 
+                className="w-full h-32 object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
             <p className="text-gray-300 dark:text-gray-400 mb-4">
               Suscríbete para recibir tips y novedades sobre desarrollo web.
             </p>
@@ -126,7 +135,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 dark:border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 dark:text-gray-500 text-sm">
               © {currentYear} ET Agency. Todos los derechos reservados.
             </p>
             
@@ -138,6 +147,8 @@ const Footer = () => {
                   <a
                     key={social.name}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-800 dark:bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-primary-600 transition-all duration-200"
                     aria-label={social.name}
                   >

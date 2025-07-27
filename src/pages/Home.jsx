@@ -15,16 +15,11 @@ import HeroSection from '../components/sections/HeroSection';
 import ServicesSection from '../components/sections/ServicesSection';
 import PortfolioHighlight from '../components/sections/PortfolioHighlight';
 import SEO from '../components/SEO';
-import { AvatarImage } from '../components/common';
-import OptimizedImage, { OptimizedAvatar } from '../components/OptimizedImage';
-import { useCDN } from '../components/CDNProvider';
 
 // Import data
 import homeData from '../data/home.json';
 
 const Home = () => {
-  const { isInitialized } = useCDN();
-
   return (
     <>
       <SEO 
@@ -117,13 +112,18 @@ const Home = () => {
 
                 {/* Client Info */}
                 <div className="flex items-center gap-4">
-                  <OptimizedAvatar
+                  <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    size={48}
-                    fallbackInitials={testimonial.name.charAt(0)}
-                    className="ring-2 ring-blue-100 dark:ring-blue-900"
+                    className="w-12 h-12 rounded-full object-cover ring-2 ring-blue-100 dark:ring-blue-900"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
                   />
+                  <div className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-lg hidden">
+                    {testimonial.name.charAt(0)}
+                  </div>
                   <div>
                     <p className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</p>
                     <p className="text-muted text-sm">{testimonial.company}</p>

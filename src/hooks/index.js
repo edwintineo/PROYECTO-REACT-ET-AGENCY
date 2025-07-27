@@ -1,4 +1,3 @@
 // Custom hooks export
 export { default as useApi } from './useApi';
 export { useSEO, useBreadcrumbs, useSEOTracking } from './useSEO';
-export { default as useImageOptimization, useCriticalImages } from './useImageOptimization';

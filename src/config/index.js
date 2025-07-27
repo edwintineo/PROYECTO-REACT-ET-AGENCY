@@ -3,8 +3,6 @@
  * Centralized configuration for the entire application
  */
 
-import ogImage from '../assets/images/og-image.svg';
-
 // Environment variables with fallbacks
 const config = {
 // App Information
@@ -74,7 +72,7 @@ app: {
     titleTemplate: '%s | ET Agency',
     defaultDescription: 'Agencia especializada en marketing digital, desarrollo web y posicionamiento SEO en Chile.',
     defaultKeywords: 'marketing digital, desarrollo web, SEO, agencia digital, Chile',
-    defaultImage: ogImage,
+    defaultImage: '/logo-et-agency.svg',
     twitterHandle: '@etagency',
     facebookAppId: process.env.REACT_APP_FACEBOOK_APP_ID,
   },

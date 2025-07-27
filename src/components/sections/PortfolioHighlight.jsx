@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, Calendar, User, TrendingUp } from 'lucide-react';
 import { getRecentProjects } from '../../utils/portfolioUtils';
-import { getImageFromPath } from '../../config/portfolioImages';
 
 const PortfolioHighlight = () => {
   const recentProjects = getRecentProjects(3);
@@ -66,7 +65,7 @@ const PortfolioHighlight = () => {
               {/* Project Image */}
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src={getImageFromPath(project.image) || project.image}
+                  src={project.image}
                   alt={project.title}
                   className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"

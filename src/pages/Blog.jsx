@@ -1,22 +1,20 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   Calendar, 
+  Clock, 
   User, 
-  ArrowRight, 
+  Search, 
+  Filter, 
+  ChevronRight,
+  ArrowRight,
   Tag,
-  Clock,
-  Eye,
   TrendingUp,
-  Globe,
-  Smartphone,
-  ShoppingCart,
-  BarChart3
-} from 'lucide-react'
-import { Image } from '../components/common'
-import { getBlogImageFromPath } from '../config/blogImages'
-
+  BookOpen
+} from 'lucide-react';
+import { blogPosts } from '../data/blogPosts';
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState('todos')
 
@@ -29,159 +27,6 @@ const Blog = () => {
     { id: 'tecnologia', name: 'Tecnología', count: 1 }
   ]
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: '10 Tendencias de Diseño Web para 2025',
-      slug: '10-tendencias-diseno-web-2025-guia-completa-empresas-chilenas',
-      excerpt: 'Descubre las últimas tendencias en diseño web que dominarán este año y cómo implementarlas en tu sitio.',
-      content: 'El diseño web evoluciona constantemente, y 2025 no es la excepción. Desde el minimalismo hasta las animaciones micro-interactivas...',
-      category: 'diseno-web',
-      author: 'ET AGENCY',
-      date: '2025-07-15',
-      readTime: '5 min',
-      views: 1250,
-      image: '/images/blog/tendencias-diseno-web-2025.svg',
-      tags: ['Diseño', 'Tendencias', 'UX/UI'],
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'Cómo Optimizar tu Sitio Web para SEO Local en Chile',
-      slug: 'como-optimizar-sitio-web-seo-local-chile',
-      excerpt: 'Guía completa para posicionar tu negocio local en los resultados de búsqueda de Google Chile.',
-      content: 'El SEO local es fundamental para negocios que atienden a clientes en ubicaciones específicas...',
-      category: 'seo',
-      author: 'ET AGENCY',
-      date: '2025-06-20',
-      readTime: '8 min',
-      views: 980,
-      image: '/images/blog/seo-local-chile.svg',
-      tags: ['SEO', 'Local', 'Google'],
-      featured: false
-    },
-    {
-      id: 3,
-      title: 'E-commerce en Chile: Integración con Webpay Plus',
-      slug: 'ecommerce-chile-integracion-webpay-plus',
-      excerpt: 'Todo lo que necesitas saber para integrar Webpay Plus en tu tienda online y aumentar las conversiones.',
-      content: 'Webpay Plus es la pasarela de pago más utilizada en Chile. Su correcta integración puede marcar la diferencia...',
-      category: 'ecommerce',
-      author: 'ET AGENCY',
-      date: '2025-05-25',
-      readTime: '6 min',
-      views: 1100,
-      image: '/images/blog/ecommerce-webpay-plus.svg',
-      tags: ['E-commerce', 'Webpay', 'Pagos'],
-      featured: true
-    },
-    {
-      id: 4,
-      title: 'Marketing Digital para Pymes: Estrategias que Funcionan',
-      slug: 'marketing-digital-pymes-estrategias-funcionan',
-      excerpt: 'Estrategias de marketing digital probadas para pequeñas y medianas empresas con presupuestos limitados.',
-      content: 'Las Pymes enfrentan desafíos únicos en el marketing digital. Con recursos limitados, es crucial...',
-      category: 'marketing',
-      author: 'ET AGENCY',
-      date: '2025-04-30',
-      readTime: '7 min',
-      views: 850,
-      image: '/images/blog/marketing-digital-pymes.svg',
-      tags: ['Marketing', 'Pymes', 'Estrategia'],
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Velocidad de Carga: Por qué es Crucial para tu Sitio Web',
-      slug: 'velocidad-carga-crucial-sitio-web',
-      excerpt: 'Aprende por qué la velocidad de carga afecta tu SEO, conversiones y experiencia de usuario.',
-      content: 'La velocidad de carga de un sitio web es uno de los factores más importantes para el éxito online...',
-      category: 'diseno-web',
-      author: 'ET AGENCY',
-      date: '2025-04-10',
-      readTime: '4 min',
-      views: 720,
-      image: '/images/blog/velocidad-carga-web.svg',
-      tags: ['Performance', 'UX', 'SEO'],
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'Diseño Responsive: Más Allá de Mobile-First',
-      slug: 'diseno-responsive-mas-alla-mobile-first',
-      excerpt: 'Explora las mejores prácticas para crear sitios web que funcionen perfectamente en todos los dispositivos.',
-      content: 'El diseño responsive ha evolucionado más allá del concepto mobile-first. Hoy debemos pensar...',
-      category: 'diseno-web',
-      author: 'ET AGENCY',
-      date: '2025-03-15',
-      readTime: '6 min',
-      views: 950,
-      image: '/images/blog/diseno-responsive.svg',
-      tags: ['Responsive', 'Mobile', 'UX'],
-      featured: false
-    },
-    {
-      id: 7,
-      title: 'SEO Técnico: Fundamentos para Desarrolladores',
-      slug: 'seo-tecnico-fundamentos-desarrolladores',
-      excerpt: 'Guía técnica sobre los aspectos fundamentales del SEO que todo desarrollador debe conocer.',
-      content: 'El SEO técnico es la base sobre la cual se construye una estrategia de posicionamiento exitosa...',
-      category: 'seo',
-      author: 'ET AGENCY',
-      date: '2025-02-28',
-      readTime: '9 min',
-      views: 1300,
-      image: '/images/blog/seo-tecnico.svg',
-      tags: ['SEO Técnico', 'Desarrollo', 'Google'],
-      featured: true
-    },
-    {
-      id: 8,
-      title: 'Conversiones en E-commerce: Optimización del Checkout',
-      slug: 'conversiones-ecommerce-optimizacion-checkout',
-      excerpt: 'Técnicas probadas para reducir el abandono del carrito y aumentar las conversiones en tu tienda online.',
-      content: 'El proceso de checkout es el momento más crítico en cualquier tienda online. Un checkout optimizado...',
-      category: 'ecommerce',
-      author: 'ET AGENCY',
-      date: '2025-02-10',
-      readTime: '5 min',
-      views: 680,
-      image: '/images/blog/conversiones-ecommerce.svg',
-      tags: ['Conversiones', 'Checkout', 'UX'],
-      featured: false
-    },
-    {
-      id: 9,
-      title: 'Diseño Web Responsive: Mejores Prácticas para una Experiencia Móvil Perfecta',
-      slug: 'diseno-web-responsive-mejores-practicas-experiencia-movil',
-      excerpt: 'Aprende las mejores prácticas de diseño responsive para crear sitios web que funcionen perfectamente en todos los dispositivos.',
-      content: 'El diseño responsive es fundamental en la era móvil actual. Con más del 60% del tráfico web proveniente de dispositivos móviles...',
-      category: 'diseno-web',
-      author: 'ET AGENCY',
-      date: '2025-01-20',
-      readTime: '16 min',
-      views: 920,
-      image: '/images/blog/diseno-responsive.svg',
-      tags: ['Diseño Web', 'Responsive', 'UX/UI', 'Mobile First'],
-      featured: false
-    },
-    {
-      id: 10,
-      title: 'Automatización de Procesos Empresariales: Cómo la Tecnología Puede Transformar tu Negocio',
-      slug: 'automatizacion-procesos-empresariales-tecnologia-transformar-negocio',
-      excerpt: 'Descubre cómo la automatización puede optimizar tus procesos empresariales, reducir costos y aumentar la eficiencia.',
-      content: 'La automatización de procesos empresariales está revolucionando la forma en que las empresas operan...',
-      category: 'tecnologia',
-      author: 'ET AGENCY',
-      date: '2025-01-05',
-      readTime: '20 min',
-      views: 1250,
-      image: '/images/blog/automatizacion-procesos.svg',
-      tags: ['Automatización', 'Procesos', 'Eficiencia', 'Tecnología'],
-      featured: true
-    }
-  ]
-
   const filteredPosts = blogPosts.filter(post => {
     const matchesCategory = selectedCategory === 'todos' || post.category === selectedCategory
     return matchesCategory
@@ -192,12 +37,12 @@ const Blog = () => {
 
   const getCategoryIcon = (category) => {
     switch (category) {
-      case 'diseno-web': return Globe
+      case 'diseno-web': return BookOpen
       case 'seo': return TrendingUp
-      case 'ecommerce': return ShoppingCart
-      case 'marketing': return BarChart3
-      case 'tecnologia': return Smartphone
-      default: return Globe
+      case 'ecommerce': return Tag
+      case 'marketing': return TrendingUp
+      case 'tecnologia': return BookOpen
+      default: return BookOpen
     }
   }
 
@@ -263,12 +108,10 @@ const Blog = () => {
                     className="card-bg rounded-xl shadow-lg overflow-hidden card-hover group"
                   >
                     <div className="relative h-48 overflow-hidden">
-                      <Image 
-                        src={getBlogImageFromPath(post.image)} 
+                      <img 
+                        src={post.image} 
                         alt={post.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        lazy={true}
-                        webp={true}
                       />
                       <div className="absolute top-4 left-4">
                         <span className="bg-yellow-400 text-gray-900 px-2 py-1 rounded-full text-xs font-semibold">
@@ -283,7 +126,7 @@ const Blog = () => {
                         <span className="mr-4">{formatDate(post.date)}</span>
                         <Clock size={14} className="mr-1" />
                         <span className="mr-4">{post.readTime}</span>
-                        <Eye size={14} className="mr-1" />
+                        <User size={14} className="mr-1" />
                         <span>{post.views}</span>
                       </div>
                       
@@ -369,12 +212,10 @@ const Blog = () => {
                       className="card-bg rounded-xl shadow-lg overflow-hidden card-hover group"
                     >
                       <div className="relative h-40 overflow-hidden">
-                        <Image 
-                          src={getBlogImageFromPath(post.image)} 
+                        <img 
+                          src={post.image} 
                           alt={post.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          lazy={true}
-                          webp={true}
                         />
                       </div>
                       
